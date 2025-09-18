@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <receta>
+        <nombre>Macarrones con tomate</nombre>
+            <ingrediente>
+                <nombre>macarrones</nombre>
+                <cantidad>200gr</cantidad>
+            </ingrediente>
+
+            <ingrediente>
+                <nombre>Agua hirviendo</nombre>
+                <cantidad>4 litros</cantidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>Tomate triturado</nombre>
+                <cantidad>200 ml</cantidad>
+            </ingrediente>
+    </receta>
+    <nombre>Albóndigas con tomate</nombre>
+            <ingrediente>
+                <nombre>Bolas de carne picada</nombre>
+                <cantidad>35gr cada una</cantidad>
+            </ingrediente>
+
+            <ingrediente>
+                <nombre>Aceite de oliva virgen extra</nombre>
+                <cantidad>10 ml</cantidad>
+            </ingrediente>
+            
+            <ingrediente>
+                <nombre>Tomate frito</nombre>
+                <cantidad>200ml</cantidad>
+            </ingrediente>
+</recetas>
