@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- EJERCICIO INSTITUTO -->
+<instituto>
+
+    <clase>
+        <alumno>
+            <nombre>Pedro Alcántara Segado</nombre>
+            <edad>20 años</edad>
+            <notaMedia>7,56</notaMedia>
+        </alumno>
+
+        <alumno>
+            <nombre>Lucas Pérez Buendía</nombre>
+            <edad>21 años</edad>
+            <notaMedia>7,26</notaMedia>
+        </alumno>
+    </clase>
+
+    <clase>
+        <alumno>
+            <nombre>Alejandro Moyano Juárez</nombre>
+            <edad>19 años</edad>
+            <notaMedia>9,34</notaMedia>
+        </alumno>
+
+        <alumno>
+            <nombre>Juan Carlos Cañuelo Zafra</nombre>
+            <edad>20 años</edad>
+            <notaMedia>5,89</notaMedia>
+        </alumno>
+    </clase>
+
+</instituto>
