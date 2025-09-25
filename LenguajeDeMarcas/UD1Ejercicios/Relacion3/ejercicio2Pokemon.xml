@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipo [
+    <!ELEMENT equipo (pokemon+)>
+    <!ELEMENT pokemon (nombre, tipo, nivel+)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT tipo (#PCDATA)>
+    <!ELEMENT nivel (#PCDATA)>
+]>
+
+<equipo>
+    <pokemon>
+        <nombre>Rhydon</nombre>
+        <tipo>Tierra y Roca</tipo>
+        <nivel>78</nivel>
+    </pokemon>
+    <pokemon>
+        <nombre>Pikachu</nombre>
+        <tipo>Eléctrico</tipo>
+        <nivel>67</nivel>
+    </pokemon>
+</equipo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "liga.dtd">
+
+<liga>
+    <entrenador>
+        <nombre>Ash</nombre>
+        <pokemon>
+            <nombre>Pikachu</nombre>
+            <tipo>Eléctrico</tipo>
+            <nivel>69</nivel>
+        </pokemon>
+        <pokemon>
+            <nombre>Snorlax</nombre>
+            <tipo>Normal</tipo>
+            <nivel>86</nivel>
+        </pokemon>
+    </entrenador>
+    <entrenador>
+        <nombre>Jessie</nombre>
+        <pokemon>
+            <nombre>Wobbuffet</nombre>
+            <tipo>Psíquico</tipo>
+            <nivel>74</nivel>
+        </pokemon>
+        <pokemon>
+            <nombre>Arbok</nombre>
+            <tipo>Veneno</tipo>
+            <nivel>71</nivel>
+        </pokemon>
+    </entrenador>
+</liga>
+    

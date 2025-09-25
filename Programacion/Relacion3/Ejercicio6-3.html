@@ -1,0 +1,18 @@
+<script>
+     //Introducimos las variables
+    let anio = parseInt = prompt("Introduzca un año")
+    let esBisiestoUno
+    let esBisiestoDos
+    let esBisiestoTres
+    //Introducimos las operaciones
+    esBisiesto = (anio%4==0)
+    esBisiestoDos = esBisiesto&&(anio%100>0)
+    esBisiestoTres = esBisiestoDos&&(anio%400>0)
+    //Lo ponemos en consola con if y else
+    if (esBisiestoTres){
+        console.log("El año que ha introducido SÍ es bisiesto")
+    } else {
+        console.log("El año que ha introducido NO es bisiesto")}
+
+
+</script>
