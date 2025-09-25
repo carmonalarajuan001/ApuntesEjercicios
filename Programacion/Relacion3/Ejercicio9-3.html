@@ -1,8 +1,19 @@
 <script>
 
-    let numero=parseInt(prompt("Introduce un numero de dos cifras"))
+    let numero=(prompt("Introduce un numero de dos cifras"))
+    let digitoUno=parseInt(numero.charAt(0))
+    let digitoDos=parseInt(numero.charAt(1))
+    let resultadoDigitos
     
 
+    if (numero >=10&&numero<100){
+        resultadoDigitos= digitoUno + digitoDos
+        console.log("El reultado de la suma de los dos dígitos es " + resultadoDigitos)
+    } else{
+        console.log("El numero que ha introducido no tiene dos dígitos")
+    } 
+    
+     
 
 
 
