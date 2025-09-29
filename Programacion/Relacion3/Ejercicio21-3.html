@@ -1,0 +1,25 @@
+<script>
+    //INTRODUCIMOS VARIABLES
+    let peso=Number(prompt("Introduzca su peso en kilogramos"))
+    let estatura=Number(prompt("Introduzca su estatura en metros"))
+    let imc
+
+
+    //HACEMOS OPERACIONES CORRESPONDIENTES
+    
+    imc=peso/(estatura*estatura)
+
+    //INTRODUCIMOS CONDICIONES
+    if(imc<=18.5){
+        console.log("Bajo peso")
+    }else if(imc<24.9){
+        console.log("Normal")
+    }else if(imc>25 && imc<29.9){
+        console.log("Sobrepeso")
+    }else{console.log("Obesidad")}
+
+
+
+
+
+</script>
