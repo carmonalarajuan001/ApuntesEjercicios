@@ -1,0 +1,18 @@
+<script>
+
+    let ingresoFam= parseFloat(prompt("introduzca su ingreso familiar actual"))
+    let notaMedia=parseFloat(prompt("Introduzca su nota media"))
+
+    if (notaMedia>=8 && ingresoFam<20000){
+     
+        console.log("Usted recibe una beca completa")
+    }
+    else if (notaMedia>8 && ingresoFam>=20000){
+        console.log("Usted recibe une beca parcial")
+    }
+    else{
+        console.log("Usted no recibe beca")
+    }
+    
+</script>
+

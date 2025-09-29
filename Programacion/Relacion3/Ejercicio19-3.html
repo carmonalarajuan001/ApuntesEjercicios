@@ -1,0 +1,19 @@
+<script>
+
+    let tiempo = Number(prompt("Introduzca el tiempo que ha estado estacionado en horas"))
+    let precio = Number
+
+    if (tiempo <= 2){
+        precio = tiempo * 5
+        console.log("El coste es de " + precio)
+    }
+
+    else if(tiempo>2 && tiempo <=5){
+        precio = tiempo * 4
+        console.log("El coste es de " + precio)
+    }
+    else{
+        precio = 20+((tiempo-5)*3)
+        console.log("El coste es de " + precio)
+    }
+</script>
