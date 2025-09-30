@@ -1,0 +1,20 @@
+<script>
+    let numero = prompt("Introduzca un número entre 0 y 100:")
+    numero = Number(numero)
+
+    if (numero > 100) {
+        console.log("La calificación supera 100... Es incorrecta.")
+    } else if (numero >= 90) {
+        console.log("La calificación es de A.")
+    } else if (numero >= 80) {
+        console.log("La calificación es de B.")
+    } else if (numero >= 70) {
+        console.log("La calificación es de C.")
+    } else if (numero >= 60) {
+        console.log("La calificación es de D.")
+    } else if (numero >= 0) {
+        console.log("La calificación es de F.")
+    } else {
+        console.log("La calificación es inferior a 0... Es incorrecta.")
+    }
+</script>

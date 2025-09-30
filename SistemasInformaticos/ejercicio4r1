@@ -1,0 +1,12 @@
+Busca archivos .conf que sean mayores a 5 KB que hayan modificado en los últimos 7 días
+
+find -name -type f "*.conf" -size +5k -mtime -7
+
+//Find para buscar la ruta.
+//Ponemos -type para especificar el tipo de directorio o archivo (f=archivos, d=directorios)
+//Introducimos name para introducir que los archivos tienen un nombre antes del tipo de archivo que sería ("*.conf")
+//Establecemos en size que el documento pese mas de 5 kbs (tamaño)
+//Ponemos el -mtime para poner que el archivo no haya sido modificado en menos de 7 días (Se modificó en los últimos 7 días)
+
+//Si ponemos -iname no tenemos en cuenta mayus ni minus.
+//Si ponemos mmin en vez de mtime ponemos cuantos minuts han pasado desde la última vez que se modificó

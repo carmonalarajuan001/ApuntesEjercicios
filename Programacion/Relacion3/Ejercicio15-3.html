@@ -1,0 +1,14 @@
+<script>
+    let angulo = prompt("Introduzca una angulo:")
+    angulo = Number(angulo)
+
+    if (angulo > 0 && angulo < 90) {
+        console.log("Agudo")
+    } else if (angulo == 90) {
+        console.log("Recto")
+    } else if (angulo > 90 && angulo < 180) {
+        console.log("Obtuso")
+    } else if (angulo == 180) {
+        console.log("Llano")
+    }
+</script>

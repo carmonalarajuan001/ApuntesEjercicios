@@ -1,0 +1,9 @@
+
+mkdir -p docs/ src/ config/ logs/ test/ src//modulos logs//backup test//resultados
+
+touch docs//manual.txt docs//guia.txt docs//referencias.txt src//script1.sh src//script2.sh src//modulos//modulo1.py config//app.cfg config//db.cfg logs//acces.log logs//error.log logs//backup//backup1.log test//test1.txt test//test2.txt test//resultados//resultados1.txt
+ 
+//Estos son los dos comandos a utilizar para resolver el ejercicio, su usa mkdir para crear las carpetas y -p para crear una torre de directorios
+//Se usa touch en otro comando para crear las carpetas
+//Utilizamos la // para ir estableciendo las rutas en las que queremos que se creen las carpetas
+//Los que se llaman exactamente igual y solamente cambia el número podríamos haber puesto por ejemplo src//script{1,2}

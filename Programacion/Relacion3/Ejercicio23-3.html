@@ -1,0 +1,29 @@
+<script>
+
+    let salario = prompt("Introduzca su salario anual")
+    let final
+    let primerImp=1000
+    let segundoImp=primerImp+((salario-20000)*0.2)
+    let tercerImp
+    let primero=(salario-10000)*0.1
+
+
+
+    if (salario <= 0) {
+        console.log("Que lástima...")
+    } else if ( salario < 10000) {
+        console.log("Usted no paga impuestos")
+    } else if ( salario < 20000) {
+        console.log("Usted pagaría" + primero + "€")
+    } else if (salario > 20001 && salario < 40000) {
+        console.log("Usted pagaría " + segundoImp + "€")
+    } else {
+        final = segundoImp + ((salario - 40000) * 0.3)
+        console.log("Usted pagaría " + final + "€")
+    }
+
+
+
+
+
+</script>

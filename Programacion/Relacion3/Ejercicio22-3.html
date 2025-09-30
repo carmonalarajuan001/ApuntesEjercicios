@@ -1,7 +1,35 @@
 <script>
 
-let valorUno
-let valorDos
+    let valorUno = prompt("¿piedra, papel o tijera?")
+    let valorDos = prompt("¿iedra, papel o tijera?")
+    valorDos.toLocaleLowerCase
+    valorUno.toLocaleLowerCase
+
+
+    if (valorUno == "piedra" || valorUno == "tijera" || valorUno == "papel" && valorDos == "piedra" || valorDos == "papel" || valorDos == "tijera") {
+        console.log("Los valores que ha introducido son correctos")
+
+    } if (valorUno == "tijera" && valorDos == "piedra") {
+        console.log("El ganador es la piedra")
+    } else if (valorUno == "tijera" && valorDos == "papel") {
+        console.log("El ganador es la tijera")
+    } else if (valorUno == "piedra" && valorDos == "tijera") {
+        console.log("El ganador es la piedra")
+    } else if (valorUno == "piedra" && valorDos == "papel") {
+        console.log("El ganador es el papel")
+    } else if (valorUno == "papel" && valorDos == "tijera") {
+        console.log("El ganador es la tijera")
+    } else if (valorUno == "papel" && valorDos == "piedra") {
+        console.log("El ganador es el papel")
+    } else if (valorUno == "tijera" && valorDos == "tijera") {
+        console.log("Empate")
+    } else if (valorUno == "papel" && valorDos == "papel") {
+        console.log("Empate")
+    } else if (valorUno == "piedra" && valorDos == "piedra") {
+        console.log("Empate")
+    } else {
+        console.log("En alguno de los valores no ha introducido piedra, papel o tijera exactamente")
+    }
 
 
 

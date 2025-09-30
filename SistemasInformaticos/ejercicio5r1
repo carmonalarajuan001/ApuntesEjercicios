@@ -1,0 +1,12 @@
+Busca archivos .log de entre 1MB y 5 MB que no se hayan modificado en los últimos 30 días
+
+find -type f -name "*.log" -size +1m -5m -mtime +30
+
+//Find para buscar la ruta.
+//Ponemos -type para especificar el tipo de directorio o archivo (f=archivos, d=directorios)
+//Introducimos name para introducir que los archivos tienen un nombre antes del tipo de archivo que sería ("*.log")
+//Establecemos en size que el documento pese mas de 1 mb y menos de 5 mbs
+//Ponemos el -mtime para poner que el archivo no haya sido modificado en mas de 30 días
+
+//Si ponemos -iname no tenemos en cuenta mayus ni minus.
+//Si ponemos mmin en vez de mtime ponemos cuantos minuts han pasado desde la última vez que se modificó
