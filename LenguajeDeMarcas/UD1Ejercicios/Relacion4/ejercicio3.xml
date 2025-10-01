@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<calendario xmlns="http://www.w3.org/2001/XMLSchema">
+    <evento id="1">
+        <titulo>Concierto de J Abecia</titulo>
+        <fecha>4/10/2025</fecha>
+        <hora>24:00</hora>
+        <ubicacion>Indistrial Copera(Granada)</ubicacion>
+        <coigoPostal>18100</coigoPostal>
+    </evento>
+    <evento id="2">
+        <titulo>PSG-Barcelona</titulo>
+        <fecha>01/10/2025</fecha>
+        <hora>21:00</hora>
+        <ubicacion>Camp Nou(Barcelona)</ubicacion>
+        <coigoPostal>08028</coigoPostal>
+    </evento>
+    <evento id="3">
+        <titulo>Final Champions B.Dortmund-Real Madrid</titulo>
+        <fecha>1/6/2024</fecha>
+        <hora>21:00</hora>
+        <ubicacion>Bernabeu(Madrid)</ubicacion>
+        <coigoPostal>28036</coigoPostal>
+    </evento>
+</calendario>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clase>
+    <alumno>
+        <nombre>Juan Carmona</nombre>
+        <edad>14</edad>
+        <nota>7</nota>
+        <dni>23122323G</dni>        
+    </alumno>
+    <alumno>
+        <nombre>Alex Segado</nombre>
+        <edad>15</edad>
+        <nota>9</nota>
+        <dni>78654309H</dni>        
+    </alumno>
+    <alumno>
+        <nombre>Carlos López</nombre>
+        <edad>15</edad>
+        <nota>5</nota>
+        <dni>23234556P</dni>        
+    </alumno>
+</clase>
