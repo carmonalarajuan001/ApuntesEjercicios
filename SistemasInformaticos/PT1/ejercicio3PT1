@@ -1,0 +1,17 @@
+
+
+Mueve el archivo script1.sh desde el subdirectorio src a test/resultados.
+
+mv src/script.sh test/resultados.
+
+
+
+Renombra script2.sh a script_final.sh dentro del subdirectorio src.
+
+mv script2.sh script_final.sh dentro de cd proyecto y cd src
+
+
+
+Mueve el directorio backup completo desde logs a test.
+
+mv logs/backup test

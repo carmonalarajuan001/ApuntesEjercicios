@@ -1,0 +1,5 @@
+
+Busca en todos los archivos .log dentro de proyecto las líneas que contengan la palabra "ERROR" (sin importar mayúsculas o minúsculas).
+find -type f -name ".log";grep "ERROR"
+
+Encuentra las líneas que contengan números (dígitos) dentro de los archivos .log dentro de la estructura proyecto.

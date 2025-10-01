@@ -1,0 +1,10 @@
+
+Busca todos los archivos con extensión .txt dentro del directorio proyecto y sus subdirectorios.
+find -type f -name "*.txt"
+
+Encuentra todos los directorios cuyo nombre contenga la palabra backup dentro de proyecto.
+find -type d -name "backup*"
+
+Busca todos los archivos que hayan sido modificados en las últimas 24 horas.
+find -type f -mtime -1
+

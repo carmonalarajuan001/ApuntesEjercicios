@@ -1,0 +1,19 @@
+-Abre el archivo manual.txt dentro de docs y agrega las siguientes líneas de texto:
+
+Capítulo 1: Introducción
+Capítulo 2: Instalación
+Capítulo 3: Uso Básico
+
+-Guarda y cierra el archivo.
+
+//TODO DENTRO DE CD PROYECTO
+
+-Visualiza el contenido del archivo editado.
+cat docs/manual.txt
+
+-Muestra las primeras 10 líneas del archivo.
+head -10 docs/manual.txt
+
+-Muestra las primeras dos líneas del archivo.
+
+head -2 docs/manual.txt

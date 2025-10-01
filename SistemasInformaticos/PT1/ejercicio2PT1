@@ -1,0 +1,12 @@
+
+
+Copia los archivos manual.txt y guia.txt desde el subdirectorio docs a un nuevo subdirectorio llamado backup_docs dentro de proyecto.
+
+mkdir backup_docs dentro de proyecto
+cp docs/manual.txt backup_docs
+cp docs/guia.txt backup_docs
+
+
+Copia de forma recursiva el directorio config completo junto con su contenido a un subdirectorio llamado config_backup dentro de proyecto.
+ cp -r config config_backup
+ Se pone el -r para copiar todos los directorios de forma recursiva
