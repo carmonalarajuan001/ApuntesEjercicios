@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>  
-<!DOCTYPE liga SYSTEM "ejercicio2.xsd">
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>
-
-<pedidos>
+<pedidos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="pedidos.xsd">
   <pedido codigo="A101">
     <cliente>
       <nombre>Ana García</nombre>

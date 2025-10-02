@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<calendario xmlns="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?>  
+<calendario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ejercicio3.xsd">
     <evento id="1">
         <titulo>Concierto de J Abecia</titulo>
-        <fecha>4/10/2025</fecha>
-        <hora>24:00</hora>
+        <fecha>2025-10-04</fecha>
+        <hora>24:00:00</hora>
         <ubicacion>Indistrial Copera(Granada)</ubicacion>
-        <coigoPostal>18100</coigoPostal>
+        <codigoPostal>18100</codigoPostal>
     </evento>
     <evento id="2">
         <titulo>PSG-Barcelona</titulo>
-        <fecha>01/10/2025</fecha>
-        <hora>21:00</hora>
+        <fecha>2025-10-01</fecha>
+        <hora>21:00:00</hora>
         <ubicacion>Camp Nou(Barcelona)</ubicacion>
-        <coigoPostal>08028</coigoPostal>
+        <codigoPostal>08028</codigoPostal>
     </evento>
     <evento id="3">
         <titulo>Final Champions B.Dortmund-Real Madrid</titulo>
-        <fecha>1/6/2024</fecha>
-        <hora>21:00</hora>
+        <fecha>2024-06-01</fecha>
+        <hora>21:00:00</hora>
         <ubicacion>Bernabeu(Madrid)</ubicacion>
-        <coigoPostal>28036</coigoPostal>
+        <codigoPostal>28036</codigoPostal>
     </evento>
 </calendario>

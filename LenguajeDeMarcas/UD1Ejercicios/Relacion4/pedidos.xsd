@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
     <xs:element name="pedidos">
         <xs:complexType>
             <xs:sequence>
@@ -9,17 +10,22 @@
                             <xs:element name="cliente">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="nombre"></xs:element>    
+                                        <xs:element name="nombre" type="xs:string"></xs:element>    
                                         <xs:element name="email">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
-                                                    <xs:pattern value="[A-Z].*"></xs:pattern>
+                                                    <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"></xs:pattern>
+                                                    <!-- Se pone todo lo dentro, el + para decir que se puede poner 1 vez o mas todo eso
+                                                     se escapa el punto con la \ ya que en el correo debe haber siempre un ., en el final
+                                                     especifica de que debe ser una letra de la a la z mayucula o minuscula y que debe ser 
+                                                     2 veces minimo(.es)(.com)      [^A]=cualquier cosa que no sea la A   (A)\1 A repetida 1 mas veces
+                                                     IS?, dice que la S puede aparecer o no por la interrogación E|S es o E o S-->
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
                                         <xs:element name="telefono">
                                             <xs:simpleType>
-                                                <xs:restriction base="xs:integer">
+                                                <xs:restriction base="xs:string">
                                                     <xs:pattern value="\d{3}-\d{3}-\d{3}"></xs:pattern>
                                                 </xs:restriction>
                                             </xs:simpleType>
@@ -27,22 +33,28 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
+                            
                             <xs:element name="productos">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="producto" maxOccurs="unbounded">                                                            
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="nombre"></xs:element>
+                                                    <xs:element name="nombre" type="xs:string"></xs:element>
                                                     <xs:element name="precio">
                                                         <xs:simpleType>
-                                                            <xs:restriction base="xs:integer">
-                                                                <xs:minInclusive value="0"/>
-                                                                <xs:maxInclusive value="999999999999"/>
+                                                            <xs:restriction base="xs:decimal">
+                                                                <xs:minInclusive value="0"/>                                                               
                                                             </xs:restriction>
                                                         </xs:simpleType>
                                                     </xs:element>
-                                                    <xs:element name="cantidad"></xs:element>                                               
+                                                    <xs:element name="cantidad">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:positiveInteger">
+                                                                <xs:minInclusive value="1"></xs:minInclusive>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>                                               
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>                            
@@ -59,6 +71,13 @@
                                 </xs:simpleType>
                             </xs:element>       
                         </xs:sequence>
+                        <xs:attribute name="codigo" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="A\d{3}"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>

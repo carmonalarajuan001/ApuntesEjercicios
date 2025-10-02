@@ -10,7 +10,9 @@
     imc=peso/(estatura*estatura)
 
     //INTRODUCIMOS CONDICIONES
-    if(imc<=18.5){
+    if (imc<0){
+        console.log("El resultado de los números que ha dado aparece negativo")
+    }else if(imc<=18.5){
         console.log("Bajo peso")
     }else if(imc<24.9){
         console.log("Normal")
