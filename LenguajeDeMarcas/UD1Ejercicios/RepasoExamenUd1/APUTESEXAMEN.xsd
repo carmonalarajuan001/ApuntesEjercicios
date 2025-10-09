@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+DNI REGEX
+<xs:element name="dni">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="\d{8}[a-zA-Z]" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+-----------------------------------------------------------------------
+EMAIL REGEX
+<xs:element name="email">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+------------------------------------------------------------------------
+PA Q EMPIECE MAYUS
+<xs:element name="nombre">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern
+                value="[A-ZÁÉÍÓÚÑ].*" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+//DESPUES DE SEQUENCE ABAJO atribute
+EJEMPLO:
+<xs:element name="curso">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:attribute name="id" use="required">
+            <xs:attribute name="id" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="C\d{3}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+        </xs:attribute>
+    </xs:sequence>
+    </xs:complextype>
+</xs:element>
+
+
+<xs:element name="estado">
+    <xs:simpleType>
+        <xs:restriction base="xs:string" >
+            <xs:enumeration value="Pendiente" />
+            <xs:enumeration value="Enviado" />
+            <xs:enumeration value="Entregado" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>       
