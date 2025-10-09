@@ -59,3 +59,21 @@ EJEMPLO:
         </xs:restriction>
     </xs:simpleType>
 </xs:element>       
+
+APUNTES DTD
+<!ELEMENT liga (entrenador+)>
+<!ELEMENT entrenador (nombre, pokemon+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT pokemon (nombre, tipo, nivel)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT nivel (#PCDATA)>
+
+LO QUE HAY QUE PONER EN XML
+<?xml version="1.0" encoding="UTF-8"?>  
+<LA_RAIZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="cursoOnline.xsd">
+
+LO QUE HAY QUE PONER EN XSD
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="LA_RAIZ"> 
