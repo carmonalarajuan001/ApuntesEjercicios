@@ -28,38 +28,32 @@ PA Q EMPIECE MAYUS
         </xs:restriction>
     </xs:simpleType>
 </xs:element>
-
-
-//DESPUES DE SEQUENCE ABAJO atribute
+------------------------------------------------------------------------
+//DESPUES DE SEQUENCE Y SEQUENCE ABAJO atribute
 EJEMPLO:
-<xs:element name="curso">
-    <xs:complexType>
-    <xs:sequence>
-        <xs:attribute name="id" use="required">
-            <xs:attribute name="id" >
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="C\d{3}"></xs:pattern>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:attribute>
-
-        </xs:attribute>
-    </xs:sequence>
-    </xs:complextype>
-</xs:element>
-
-
+<xs:sequence>
+...
+...
+</xs:sequence>
+<xs:attribute name="id">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="C\d{3}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+------------------------------------------------------------------------
+ESTABLECER UNAS PALABRAS CONCRETAS EN ENUMERACIÓN.
 <xs:element name="estado">
     <xs:simpleType>
-        <xs:restriction base="xs:string" >
+        <xs:restriction base="xs:string">
             <xs:enumeration value="Pendiente" />
             <xs:enumeration value="Enviado" />
             <xs:enumeration value="Entregado" />
         </xs:restriction>
     </xs:simpleType>
-</xs:element>       
-
+</xs:element>
+------------------------------------------------------------------------
 APUNTES DTD
 <!ELEMENT liga (entrenador+)>
 <!ELEMENT entrenador (nombre, pokemon+)>
@@ -67,13 +61,15 @@ APUNTES DTD
 <!ELEMENT pokemon (nombre, tipo, nivel)>
 <!ELEMENT tipo (#PCDATA)>
 <!ELEMENT nivel (#PCDATA)>
++ para que pueda aparecer mas de una vez //// ? para saber si puede o no aparecer
+------------------------------------------------------------------------
 
 LO QUE HAY QUE PONER EN XML
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
 <LA_RAIZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="cursoOnline.xsd">
-
+    xsi:noNamespaceSchemaLocation="cursoOnline.xsd">
+------------------------------------------------------------------------
 LO QUE HAY QUE PONER EN XSD
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="LA_RAIZ"> 
+<xs:element name="LA_RAIZ"> 

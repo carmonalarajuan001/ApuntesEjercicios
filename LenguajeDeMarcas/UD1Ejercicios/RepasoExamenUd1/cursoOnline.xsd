@@ -7,7 +7,7 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="titulo" type="xs:string" />
-                            <xs:element name="duracion">                          
+                            <xs:element name="duracion">
                                 <xs:complexType>
                                     <xs:attribute name="horas">
                                         <xs:simpleType>
@@ -19,12 +19,12 @@
                             <xs:element name="nivel">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:string">
-                                        <xs:enumeration value="Básico"/>
-                                        <xs:enumeration value="Intermedio"/>
-                                        <xs:enumeration value="Avanzado"/>
-                                        </xs:restriction>
+                                        <xs:enumeration value="Básico" />
+                                        <xs:enumeration value="Intermedio" />
+                                        <xs:enumeration value="Avanzado" />
+                                    </xs:restriction>
                                 </xs:simpleType>
-                            </xs:element>       
+                            </xs:element>
                             <xs:element name="profesor">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -71,9 +71,10 @@
                                                     </xs:element>
                                                     <xs:element name="nota">
                                                         <xs:simpleType>
-                                                            <xs:restriction base="xs:string">
-                                                                <xs:pattern
-                                                                    value="\d(\.\d)?" />
+                                                            <xs:restriction base="xs:decimal">
+                                                                <xs:pattern value="\d.\d"></xs:pattern>
+                                                                <xs:minInclusive value="0" />
+                                                                <xs:maxInclusive value="10" />
                                                             </xs:restriction>
                                                         </xs:simpleType>
                                                     </xs:element>
@@ -84,7 +85,7 @@
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="id" >
+                        <xs:attribute name="id">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
                                     <xs:pattern value="C\d{3}"></xs:pattern>
