@@ -1,0 +1,24 @@
+<script>
+  let numero = prompt("Introduce un número para determinar si es primo o no");
+  let contador = 2;
+  let esPrimo = false
+
+  while (!esPrimo) {//esPrimo == false
+    contador = 2;
+
+    while (numero % contador != 0) {
+      contador++;
+    }
+
+    if (contador == numero) {
+      console.log("El número " + numero + " es primo");
+      esPrimo = true
+    } else {
+      console.log("El número " + numero + " no es primo");
+      numero++;
+    }
+  }
+
+  //idea= mientrasque no encuentre un numero primo busco porcion de codigo que me los busque, 2 while
+  //primer while te dce si es primo y si no seguimos buscando el siguiente
+</script>

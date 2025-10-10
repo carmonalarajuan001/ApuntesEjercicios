@@ -1,0 +1,41 @@
+<script>
+
+let numero = prompt("Introduzca un número");
+  numero = Number(numero);
+
+  numero = numero + 1; //porque tengo que buscar el sig numero.
+  while (numero % 2 != 0) {
+    console.log("Sigo buscando. Voy por el " + numero); //seguir buscando //mientras que mi numero no sea divisible entre dos (())
+    numero++
+  }
+  console.log("El siguiente numero multiplo de dos es " + numero)
+  numero = numero + 1; //porque tengo que buscar el sig numero.
+  while (numero % 3 != 0) {
+    console.log("Sigo buscando. Voy por el " + numero); //seguir buscando //mientras que mi numero no sea divisible entre dos (())
+    numero++
+  }
+  console.log("El siguiente numero multiplo de tres es " + numero)
+
+  numero = numero + 1; //porque tengo que buscar el sig numero.
+  while (numero % 5 != 0) {
+    console.log("Sigo buscando. Voy por el " + numero); //seguir buscando //mientras que mi numero no sea divisible entre dos (())
+    numero++
+  }
+  console.log("El siguiente numero multiplo de cinco es " + numero)
+
+
+
+
+  // lo e echo buscando los dos siguintes numero aislados, pero los pide juntos, sería así:
+  numero=numero+1
+while((numero%2!=0)||(numero%3!=0)||(numero%5!=0)){  //"false o false"
+  numero++ //Esto se utiliza para ir sumandole uno al numero hasta que cumpla las condiciones que pide el while
+}
+console.log("El sigiente número de dos, tres y cinco es " + numero)
+
+//Solucion del ejercicio esta abajo
+ 
+
+
+
+</script>

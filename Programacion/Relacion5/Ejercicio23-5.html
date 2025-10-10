@@ -1,0 +1,24 @@
+<script>
+//no igual en la condicion de un for
+let tamanio=prompt("introduce el tamaño de la pirámide")
+let fila=""
+let asteriscos=""
+let espacios=""
+const ASTERISCOS="*"
+const ESPACIOS=" "
+
+for (let i = 0;i<tamanio; i++){
+    espacios+= ESPACIOS.repeat(i)
+    asteriscos=ASTERISCOS.repeat(tamanio-1)
+    fila=espacios-asteriscos
+    console.log(fila)
+}
+
+</script> 
+
+i       " "         "*" 
+1       5
+2       4
+3       3
+4       2
+5       1
