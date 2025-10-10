@@ -64,7 +64,7 @@ APUNTES DTD
 + para que pueda aparecer mas de una vez //// ? para saber si puede o no aparecer
 ------------------------------------------------------------------------
 
-LO QUE HAY QUE PONER EN XML
+LO QUE HAY QUE PONER EN XML PARA UN XSD
 <?xml version="1.0" encoding="UTF-8"?>
 <LA_RAIZ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="cursoOnline.xsd">
@@ -73,3 +73,7 @@ LO QUE HAY QUE PONER EN XSD
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <xs:element name="LA_RAIZ"> 
+
+LO QUE HAY QUE PONER EN XML PARA UN DTD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "liga.dtd">
