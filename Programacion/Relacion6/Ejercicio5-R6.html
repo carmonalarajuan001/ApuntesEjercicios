@@ -26,21 +26,25 @@
     let temperatura
     let dia = 1
     let sumatorio = ""
+    let temperaturaMedia
 
-    temperatura = Number(prompt("Introduce la temperatura del dia " + dia + ": "))
+    
 
     while (dia <= 7) {
         temperatura = Number(prompt("Introduce la temperatura del dia " + dia + ": "))
-        if (temperatura <= -20 & temperatura >= 50){
+        if (temperatura <= -20 || temperatura >= 50){
             console.log("Temperatura incorrecta. Debe estar entre -20 y 50")
           
         
         } else{
-             sumatorio += temperatura
+             
             dia++
+            sumatorio += temperatura
         }
        
     }
+    temperaturaMedia= sumatorio/7
+       console.log("La temperatura media de la samana es de " + temperaturaMedia)
       
 
 

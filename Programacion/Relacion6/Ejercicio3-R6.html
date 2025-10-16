@@ -26,7 +26,7 @@
 
     let precio
     let personas
-    let numeroProducto = 1
+    let numeroProductos = 1
     let sumatorio = 0
     let porcentajePropina 
     let totalPropina 
@@ -34,9 +34,9 @@
 
 
     while (precio != 0) {
-        precio = Number(prompt("Precio del producto " + numeroProducto + ": "))
+        precio = Number(prompt("Precio del producto " + numeroProductos + ": "))
         sumatorio += precio
-        numeroProducto++
+        numeroProductos++
     }
     porcentajePropina =Number( prompt("¿Cuánta propina quieres dejar?:"))
     personas = prompt("¿Cúantas personas sois?:")
