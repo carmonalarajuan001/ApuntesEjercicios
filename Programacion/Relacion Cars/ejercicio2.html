@@ -1,0 +1,34 @@
+<script>
+
+    let repostaje
+    let numRepostaje = 0
+    let tanque = 0
+    const PRECIOLITRO = 1.25
+    let totalGastado
+
+    numRepostaje++
+
+    repostaje = Number(prompt("Repostaje" + numRepostaje + " :"))
+
+    while (tanque < 60) {
+        tanque += repostaje
+        if (tanque < 60) {
+            numRepostaje++
+            repostaje =Number( prompt("Repostaje" + numRepostaje + " :"))
+        }           
+    }
+    
+    console.log("Depósito lleno")
+    console.log("Total de repostajes: " + numRepostaje );
+
+    totalGastado=repostaje*PRECIOLITRO
+    console.log("Total gastado: " + totalGastado)
+    
+
+
+
+
+
+
+
+</script>

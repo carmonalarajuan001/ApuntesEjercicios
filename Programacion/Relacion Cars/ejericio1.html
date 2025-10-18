@@ -1,0 +1,29 @@
+<script>
+
+
+    let tiempo
+    let numeroCoche = 1
+    let coche
+    let sumatorio = 0
+    let tiempoMedio = 0
+
+    while (coche != "FIN") {
+        coche = (prompt("Nombre del coche " + numeroCoche + ":"))
+        numeroCoche++
+        if (coche != "FIN") {
+            tiempo = Number(prompt("Tiempo en boxes: "))          
+            sumatorio += tiempo
+
+        }else{
+            numeroCoche= numeroCoche-2
+        }
+
+        tiempoMedio=sumatorio/numeroCoche
+    }
+    console.log("Total de coches: " + numeroCoche);
+    console.log("Tiempo medio: " + tiempoMedio)
+    console.log("El coche mas rápido fue " + coche + "con" + tiempo + "segundos")
+
+
+
+</script>
