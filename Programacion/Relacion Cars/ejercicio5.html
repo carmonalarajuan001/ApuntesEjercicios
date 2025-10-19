@@ -1,0 +1,23 @@
+<script>
+    let numeroNeumaticos
+    let numeroCliente = 1
+    let sumaNeumaticos = 0
+    let neumaticos
+    let cambioCompleto = 4
+
+    while (neumaticos != 0) {
+        neumaticos = Number(prompt("Cliente" + numeroCliente + ":"))
+        while (neumaticos > 0 && neumaticos < 4)
+            if (cambioCompleto == neumaticos) {
+
+            }
+        sumaNeumaticos += neumaticos
+        numeroCliente++
+    }
+    numeroCliente = numeroCliente - 2
+    console.log("Total de clientes: " + numeroCliente)
+    console.log("Neumáticos vendidos: " + sumaNeumaticos)
+
+
+
+</script>

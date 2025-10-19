@@ -1,0 +1,23 @@
+<script>
+
+    let tiempoVuelta
+    let iteracion= 1
+    let tiempoTotal=0
+    let tiempoMedio
+
+
+    for (let i = 0; i < 5; i = i + 1) {
+        tiempoVuelta=Number(prompt("Tiempo vuelta" + iteracion))
+        iteracion++       
+        tiempoTotal += tiempoVuelta        
+    }
+
+    console.log("Tiempo total: " + tiempoTotal)
+
+    tiempoMedio=tiempoTotal/5
+    console.log("Tiempo medio: " + tiempoMedio)
+    console.log("")
+
+
+    
+</script>

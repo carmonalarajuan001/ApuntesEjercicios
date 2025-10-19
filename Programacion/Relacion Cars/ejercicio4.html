@@ -1,0 +1,45 @@
+<script>
+
+    let numeroCoches = prompt("Introduce el número de coches por carrera")
+    let puntosConseguidos
+    let numeroCoche = 1
+
+    for (let i = 0; i < numeroCoches; i++) {
+
+        puntosConseguidos = prompt("Introduce las puntos del coche " + numeroCoche)
+        if (puntosConseguidos > 100) {
+            console.log("La puntuación máxima es de 100")
+            
+        } else if (puntosConseguidos < 50 && puntosConseguidos >= 0) {
+            
+            console.log("🥉 Fuera del podio");
+
+        } else if (puntosConseguidos < 80 && puntosConseguidos > 50) {
+           
+            console.log("🥈 Plata");
+
+        } else if (puntosConseguidos <= 100 && puntosConseguidos > 81) {
+            
+            console.log("🥇 Oro");
+
+        }
+        numeroCoche++
+        
+       
+
+      
+    console.log("Coche" + numeroCoche + ":" + puntosConseguidos)
+
+
+    }
+   
+
+
+
+
+
+
+
+
+
+</script>
