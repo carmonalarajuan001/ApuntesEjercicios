@@ -1,0 +1,59 @@
+<script>
+
+    let electrodomesticos = prompt("Introduce el número de electrodomesticos que deseas registrar")
+    let kilovatioHora = prompt("Introduce el precio por kilovatio-hora (kWh) para calcular el coste del consumo eléctrico")
+    let potenciaTotal = prompt("Introduce la potencia total contratada")
+    let potenciaElectrodomestico = 0
+    let usoDiario = 0
+    let numeroElectrodomestico = 1
+    let sumaPotencia = 0
+    let consumoMensual= 0
+    let costeMensual = 0
+    let consumoDiario=0
+    let potenciaSuperada = false
+    let consumoTotalMensual = 0
+    
+
+
+        for (let i = 0; i <= electrodomesticos&& !potenciaSuperada; i++) {
+            potenciaElectrodomestico=prompt("Introduce potencia del electrodoméstico " + i + " (en vatios): ")
+            if (sumaPotencia+ potenciaElectrodomestico<potenciaTotal){
+                usoDiario=Number(prompt("Introduce el número de horas de uso diario: "))
+                   consumoDiario=(potenciaElectrodomestico/1000) * usoDiario
+                   consumoMensual=consumoDiario * 30
+                   consumoTotalMensual+=consumoMensual
+                   costeMensual=consumoTotalMensual*kilovatioHora
+                   sumaPotencia+=potenciaElectrodomestico
+            } else{
+                alert("¡Alerta! Has superado la potencia de" + potenciaElectrodomestico )
+                potenciaSuperada=true
+            }
+        
+
+
+
+        }
+console.log("Consumo total mensual "+ consumoTotalMensual + "kWh")
+console.log("Coste total mensual" + costeMensual + "€")
+
+
+
+
+
+
+
+
+</script>
+
+//Introduce el número de electrodomésticos a registrar: 2
+//Introduce el precio por kilovatio-hora (kWh): 0.15
+//Introduce la potencia total contratada (en vatios): 5000
+
+//Introduce la potencia del electrodoméstico 1 (en vatios): 1000
+//Introduce el número de horas de uso diario: 4
+
+//Introduce la potencia del electrodoméstico 2 (en vatios): 800
+//Introduce el número de horas de uso diario: 6
+
+//Consumo total mensual: 264 kWh
+//Coste total mensual: 39.60 €
