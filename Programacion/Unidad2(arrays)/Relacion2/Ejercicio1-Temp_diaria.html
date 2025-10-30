@@ -1,0 +1,83 @@
+<script>
+
+    let temperaturaUsuario
+    let temperaturasArray = []
+    const DIAS = 7
+    let diaSemana = 1
+    let opcion
+    let temperaturaAlta
+    let temperaturaBaja
+    let temperaturaPromedio
+    let sumaTemperaturas = 0
+
+    for (let i = 0; i < DIAS; i++) {
+        temperaturaUsuario = prompt("Introduce la temperatura " + diaSemana)
+        temperaturasArray.push(temperaturaUsuario)
+        diaSemana++
+
+    }
+
+
+    while (opcion != 4) {
+
+
+        console.log("1. Mostrar la temperatura más alta registrada.");
+        console.log("2. Mostrar la temperatura más baja registrada.");
+        console.log("3. Calcula la temperatura promedio de la semana.");
+        console.log("4. Salir del programa.");
+
+        opcion = prompt("Elige una opción (1-4): ")
+
+        console.log("-------------------------------------------------------------------")
+
+
+        if (opcion >= 1 && opcion <= 4) {
+
+            if (opcion == 1) {
+                for (let i = 0; i < temperaturasArray.length; i++) {
+                    if (i === 0 || parseFloat(temperaturasArray[i]) > parseFloat(temperaturaAlta)) {
+                        temperaturaAlta = temperaturasArray[i];
+                    }
+                }
+                console.log("La temperatura más alta registrada es: " + temperaturaAlta)
+
+
+            } if (opcion == 2) {
+                for (let i = 0; i < temperaturasArray.length; i++) {
+                    if (i === 0 || parseFloat(temperaturasArray[i]) < parseFloat(temperaturaBaja)) {
+                        temperaturaBaja = temperaturasArray[i];
+                    }
+
+                }
+                console.log("La temperatura más baja registrada es: " + temperaturaBaja)
+
+
+            } if (opcion == 3) {
+                for (let i = 0; i < temperaturasArray.length; i++) {
+                    sumaTemperaturas += parseFloat(temperaturasArray[i]);
+                    temperaturaPromedio = sumaTemperaturas / temperaturasArray.length;
+
+
+
+                }
+                console.log("La temperatura promedio de la semana es: " + temperaturaPromedio)
+
+
+            } if (opcion == 4) {
+                console.log("Saliendo del programa...");
+
+
+            }
+        } else {
+            console.log("Opción no válida.");
+        }
+
+
+
+    }
+
+
+
+
+
+</script>
