@@ -1,0 +1,54 @@
+<script>
+    let tituloLibro = []
+    let cantidadLibro = []
+    let salir = true
+    let opcion
+    let titulo
+    let cantidad
+
+
+    while (salir) {
+        console.log("1.Añadir un nuevo libro al inventario (con su título y cantidad)")
+        console.log("2.Actualizar la cantidad de un libro existente")
+        console.log("3.Ver el inventario completo")
+        console.log("4.Salir del programa")
+        console.log("-----------------------------------------------------------------------------")
+
+        opcion = prompt("Elija una de las 4 opciones")
+
+        if (opcion == "4") {
+            console.log("Saliendo del programa...")
+            salir = false
+
+        } else {
+            if (opcion == "1") {
+                titulo = prompt("Introduzca el titulo del libro")
+                cantidad = prompt("Introdice la cantidad del libro nombrado anteriormente")
+
+                tituloLibro.push(titulo)
+                cantidadLibro.push(cantidad)
+
+
+            }
+            if (opcion == "2") {
+                for (let i = 0; i < tituloLibro.length; i++) {
+
+                }
+
+
+            }
+            if (opcion == "3") {
+                console.log("Libros y cantidad actual:")
+                for (let i = 0; i < tituloLibro.length; i++) {
+                    console.log((i + 1) + ". " + tituloLibro[i] + " - Cantidad: " + cantidadLibro[i])
+                }
+                console.log("------------------------")
+            }
+
+        }
+
+    }
+
+
+
+</script>

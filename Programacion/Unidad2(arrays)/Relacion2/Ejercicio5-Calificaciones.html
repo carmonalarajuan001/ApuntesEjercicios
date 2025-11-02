@@ -1,0 +1,74 @@
+<script>
+
+    let nombreEstudiantes = []
+    let calificacionesEstudiantes = []
+    let salir = true
+    let opcion
+    let nombre
+    let calificacion
+    let sumaCalificaciones = 0
+    let calificacionPromedio
+
+    while (salir) {
+
+        console.log("1.Añadir un estudiante y su calificación.")
+        console.log("2.Mostrar la calificación promedio de la clase.")
+        console.log("3.Mostrar la calificación más alta y el nombre del estudiante correspondiente.")
+        console.log("4.Mostrar la calificación más baja y el nombre del estudiante correspondiente.")
+        console.log("5.Salir del programa.")
+        console.log("-----------------------------------------------------------------------------")
+
+        opcion = prompt("Elija una de las 5 opciones")
+
+
+        if (opcion == "5") {
+            salir = false
+            console.log("Saliendo del programa...")
+
+        } else {
+            if (opcion == "1") {
+
+                nombre = prompt("Introduzca el nombre del estudiante")
+                calificacion = prompt("Introduce la calificacion del alumno nombrado anteriormente")
+
+                nombreEstudiantes.push(nombre)
+                calificacionesEstudiantes.push(calificacion)
+
+            } if (opcion == "2") {
+                for (let i = 0; i < calificacionesEstudiantes.length; i++) {
+                    sumaCalificaciones += parseFloat(calificacionesEstudiantes[i]);
+                    calificacionPromedio = sumaCalificaciones / calificacionesEstudiantes.length;
+
+                }
+                console.log("La calificación promedio de todos los alumnos es: " + calificacionPromedio)
+                console.log("-----------------------------------------------------------------------------")
+
+
+
+            } if (opcion == "3") {
+
+            } if (opcion == "4") {
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+</script>

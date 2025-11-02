@@ -1,0 +1,54 @@
+<script>
+
+    let productos = ["manzana", "pan", "leche", "huevo", "queso", "arroz", "pasta", "tomate", "pollo", "pescado"];
+    let precios = [0.5, 1.2, 0.8, 0.3, 2.5, 1.0, 1.5, 0.7, 3.0, 4.0]
+    let salir = true
+    let producto = ""
+    let cantidad = ""
+    let preciounitario = 0
+    let sumaprecio = 0
+    let compra = ""
+    let sumaPrecioTotal = 0
+
+
+    console.log("Productos: " + productos)
+    console.log("Precios de los productos (respectivamente): " + precios)
+    while (salir) {
+        
+        compra = prompt("Introduce el nombre del producto que deseas comprar (o 'FIN' para terminar): ")
+        if (compra == "FIN") {
+            salir = false
+        } else {
+            cantidad = prompt("Introduce la cantidad que deseas comprar: ")
+            for (let i = 0; i < productos.length; i++) {
+                if (compra == productos[i]) {
+                    sumaprecio = precios[i] * cantidad
+                    sumaPrecioTotal += sumaprecio
+
+                }
+
+            }
+            console.log("Total a pagar por " + cantidad + " unidades de " + compra + ": " + sumaprecio + " euros.")
+
+
+            console.log("Precio total de todos los productos: " + sumaPrecioTotal + " euros.")
+            console.log("---------------------------------------------------")
+
+
+        }
+
+
+
+
+    }
+    console.log("---------------------------------------------------")
+    console.log("Precio final a pagar: " + sumaPrecioTotal + " euros.")
+    console.log("Gracias por su compra. ")
+
+
+
+
+
+
+
+</script>
