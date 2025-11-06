@@ -1,0 +1,51 @@
+<script>
+
+    function primosMenoresCotaSuperior(cotaSuperior) {
+
+        let primosMenores = []
+        for (let i = 1; i < cotaSuperior; i++) {
+            if (esPrimo[i]) {
+                primosMenores.push(i)
+            }
+        }
+        return primosMenores
+        //METO LA FUNCION EN EL IF
+
+
+
+
+
+
+
+
+
+    }
+
+    function esPrimo(numeroComprobar) {
+
+        let contador = 2
+        let resultado
+
+        while (numeroComprobar % contador != 0) {
+            contador++
+        }
+
+        if (contador == numeroComprobar) {
+            resultado = true
+
+        } else {
+            resultado = false
+        }
+        return resultado
+
+
+
+    }
+
+    //----------------------------------MAIN------------
+
+    let cotaUsuario = Number(prompt("Introduce el numero para ccalcular primos menores"))
+    console.log(primosMenoresCotaSuperior(cotaUsuario))
+
+
+</script>
