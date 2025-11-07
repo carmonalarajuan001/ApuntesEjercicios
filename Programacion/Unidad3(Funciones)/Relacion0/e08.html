@@ -1,0 +1,24 @@
+<script>
+
+function mayor(numeroUno, numeroDos) {
+   
+    resultado=0
+
+    if (numeroUno>numeroDos) {
+        resultado=numeroUno 
+    }
+    else{
+        resultado=numeroDos
+    }
+    return resultado
+}
+//MAIN----------------------------
+
+let numeroUsuarioUno=Number(prompt("Introduce un numero"))
+let numeroUsuarioDos=Number(prompt("Introduce otro numero"))
+
+console.log("El numero " + mayor(numeroUsuarioUno, numeroUsuarioDos) + " es mayor")
+
+
+
+</script>

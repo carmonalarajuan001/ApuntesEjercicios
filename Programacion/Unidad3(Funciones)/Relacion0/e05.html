@@ -1,0 +1,17 @@
+<script>
+
+    function factorial(numero) {
+
+        let calculoFactorial=1
+
+        for (let i = 1; i <= numero; i++) {
+            calculoFactorial*=i           
+        }
+        return calculoFactorial
+
+    }
+let numeroUsuario=Number(prompt("Introduce un numero para ver su factorial"))
+
+console.log(factorial(numeroUsuario))
+
+</script>
