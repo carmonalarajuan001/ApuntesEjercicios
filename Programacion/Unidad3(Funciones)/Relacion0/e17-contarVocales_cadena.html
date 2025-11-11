@@ -1,0 +1,19 @@
+<script>
+    function contarVocales(cadenaTexto) {
+    let cantidadTotalVocales=0
+        for (const letra of cadenaTexto) {            
+            if (letra=="A"||letra=="E"||
+            letra=="I"||letra=="O"||
+            letra=="U") {
+                cantidadTotalVocales++
+            }           
+        }      
+        return cantidadTotalVocales
+    }
+
+//--------------------MAIN--------------
+
+const CADENA ="MURCIELAGO GRANDE"
+alert(contarVocales(CADENA))
+    
+</script>
