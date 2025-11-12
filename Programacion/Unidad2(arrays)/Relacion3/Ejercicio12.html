@@ -1,0 +1,20 @@
+<script>
+
+//12. Encuentra el Número Más Pequeño y Más Grande
+//Dado un array de números, escribe una función que devuelva el número más pequeño y el número más grande en el array como un array de dos elementos.
+//Ejemplo: [12, 5, 7, 19, 1] debería devolver [1, 19].
+
+let numeros = [12, 5, 7, 19, 1]
+let numMenor = numeros[0]
+let numMayor = numeros[0]
+for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] < numMenor) {
+        numMenor = numeros[i]
+    }
+    if (numeros[i] > numMayor) {
+        numMayor = numeros[i]
+    }
+}
+console.log([numMenor, numMayor])
+</script>
+

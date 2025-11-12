@@ -1,0 +1,22 @@
+<script>
+
+//Cuenta Elementos con una Condición
+//Dado un array de números, escribe una función que cuente cuántos números son mayores que un valor dado X.
+//Ejemplo: [5, 12, 8, 30, 25] con X = 10 debería devolver 3 (porque hay tres números mayores a 10: 12, 30 y 25).
+
+
+
+let numeros = [23,45,67,89,48,23,15]
+let numUsu=Number(prompt("Numero para ver cuantos son mayores"))
+let contadorNum = 0
+
+for (let i = 0; i < numeros.length; i++) {
+    if (numUsu < numeros[i]) {
+        contadorNum++
+    }
+}
+console.log(contadorNum)
+
+
+
+</script>
