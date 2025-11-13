@@ -1,0 +1,34 @@
+<script>
+    //3. Generar un Array de Números Enteros Aleatorios
+    //Crea una función llamada arrayAleatorio que reciba dos parámetros: 
+    //cantidad (que indica cuántos números generar) y 
+    //max (que es el valor máximo de cada número). 
+    //Esta función debe devolver un array que contenga cantidad de números enteros aleatorios 
+    //entre 0 y max. 
+    //Por ejemplo, si cantidad es 5 y max es 20, podría devolver [5, 12, 19, 8, 3].
+
+    function arrayAleatorio(cantidad, max) {
+        let numerosAleatorios = []
+        let aleatorio = 0
+        for (let i = 0; i < array.length; i++) {
+            aleatorio = Math.floor(Math.random() * max + 1)
+            numerosAleatorios.push(aleatorio)
+
+            return numerosAleatorios
+        }
+
+    }
+
+    //genero array con 5 numeros aleatorios entre 0 y 20
+    alert(arrayAleatorio(5, 20))
+
+    //genero array con 5 numeros aleatorios entre 0 y 20
+    alert(arrayAleatorio(2, 100))
+
+
+
+
+
+
+
+</script>
