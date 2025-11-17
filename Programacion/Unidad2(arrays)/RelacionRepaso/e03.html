@@ -1,0 +1,52 @@
+<script>
+
+    //  3. Tienda de cartas coleccionables
+    // Crea dos arrays: uno con 8 cartas y otro con sus precios.
+    // El programa debe permitir hacer compras introduciendo nombre y cantidad.
+    // Debe sumar subtotales y terminar cuando el usuario escriba FIN,
+    //  mostrando el total final y cuántos tipos distintos ha comprado.
+
+    let cartas = [
+        "Dragon",
+        "Mago",
+        "Guerrero",
+        "Arquera",
+        "Golem",
+        "Serpiente",
+        "Fenix",
+        "Caballero"
+    ];
+    let precios = [500, 300, 450, 200, 150, 350, 800, 600];
+    let comprado = []
+    let nombre
+    let salir = true
+    let posicion
+
+    while (salir == true) {
+        nombre = prompt("Introduce elnombre de la carta que quieres comprar" + cartas)
+
+        for (let i = 0; i < cartas.length; i++) {
+            if (cartas[i] === nombre) {
+                posicion = i;
+                comprado.push(cartas[posicion])
+                for (let i = 0; i < precios.length; i++) {
+                    
+                    
+                }
+            }else{
+                console.log("Nombre incorrecto");                
+            }
+        }
+
+        
+        console.log(comprado)
+
+        if (nombre=="FIN") {
+            salir=false
+        }
+
+    }
+    console.log("HAS COMPRADO ESTAS CARTAS:" + comprado)
+
+
+</script>

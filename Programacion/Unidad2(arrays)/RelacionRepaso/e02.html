@@ -16,7 +16,11 @@
     let opcion
     let nombre
     let puntuacion
-    let salir=false
+    let salir = false
+    let maxPuntuacion=-99999
+    let minPuntuacion=99999
+    let mejorJugador
+    let peorJugador
 
 
     while (salir == false) {
@@ -32,29 +36,40 @@
             nombresArray.shift()
             puntuacionesArray.shift()
 
-        } else if (opcion == "2") {
-            for (let i = 0; i < puntuacion.length; i++) {
-                if (puntuacion[i] < minimo) {
-                    minimo = puntuacion[i];
-                }
-
-            }
-            console.log("El valor minimo es: " + minimo)
         } else if (opcion == "3") {
-            for (let i = 0; i < puntuacion.length; i++) {
-                sumaPuntuaciones += parseFloat(puntuacion[i]);
-                puntuacionMedia = sumaPuntuaciones / puntuacion.length
+            for (let i = 0; i < puntuacionesArray.length; i++) {
+                if (puntuacionesArray[i] > maxPuntuacion) {
+                    maxPuntuacion = puntuacionesArray[i];
+                    mejorJugador = nombresArray[i];
+                }
             }
-            console.log("La suma media de puntuaciones es de " + puntuacionMedia);
+            console.log("Mejor jugador:", mejorJugador);
+            console.log("Puntuación:", maxPuntuacion);
 
+        } else if (opcion == "2") {
+            
+            console.log(nombresArray);
+            console.log(puntuacionesArray);
+            
 
         } else if (opcion == "4") {
-            salir = true
-            console.log("Saliendo del programa");
+            for (let i = 0; i < puntuacionesArray.length; i++) {
+                if (puntuacionesArray[i] < minPuntuacion) {
+                    minPuntuacion = puntuacionesArray[i];
+                    peorJugador = nombresArray[i];
+                }
+            }
+            console.log("Peor jugador:", peorJugador);
+            console.log("Puntuación:", minPuntuacion);
 
-        } else {
-            console.log("Eso no es una opción")
-        }
+
+
+
+        } else if (opcion == "5") {
+            salir = true
+            console.log("Saliendo del programa")
+        };
+
     }
 
 
