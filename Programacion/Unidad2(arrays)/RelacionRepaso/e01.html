@@ -1,0 +1,61 @@
+<script>
+
+    let puntuacion = [6,7, 8, 9, 5, 5, 4, 3, 5]
+    let puntuacionUsuario
+    let maximo = -9999999999
+    let minimo = 999999999
+    let salir = false
+    let opcion
+    let sumaPuntuaciones = 0
+    let puntuacionMedia = 0
+
+    for (let i = 0; i < puntuacion.length>10; i++) {
+        puntuacionUsuario = prompt("Establece la puntuación")
+        puntuacion.push(puntuacionUsuario)
+
+    }
+
+    while (salir == false) {
+        opcion = prompt("Elige una opción")
+
+
+
+        if (opcion == "1") {
+            for (let i = 0; i < puntuacion.length; i++) {
+                if (puntuacion[i] > maximo) {
+                    maximo = puntuacion[i];
+                }
+            }
+
+            console.log("El valor máximo es: " + maximo)
+        } else if (opcion == "2") {
+            for (let i = 0; i < puntuacion.length; i++) {
+                if (puntuacion[i] < minimo) {
+                    minimo = puntuacion[i];
+                }
+                
+            }
+             console.log("El valor minimo es: " + minimo)
+        } else if (opcion == "3") {
+            for (let i = 0; i < puntuacion.length; i++) {
+                sumaPuntuaciones += parseFloat(puntuacion[i]);
+                puntuacionMedia = sumaPuntuaciones / puntuacion.length
+            }
+            console.log("La suma media de puntuaciones es de "+puntuacionMedia);
+            
+
+        } else if (opcion == "4") {
+            salir = true
+            console.log("Saliendo del programa");
+
+        } else {
+            console.log("Eso no es una opción")
+        }
+    }
+
+
+
+
+
+
+</script>

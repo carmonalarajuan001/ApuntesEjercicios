@@ -1,0 +1,64 @@
+<script>
+
+    // 2. Torneo de dados
+
+    // Crea dos arrays paralelos: uno con los nombres de los últimos 6 jugadores y otro con sus puntuaciones.
+    // El menú debe permitir:
+
+    //     Añadir un nuevo jugador (eliminando al más antiguo).
+    //     Mostrar jugadores y puntuaciones.
+    //     Mostrar el jugador con mayor puntuación.
+    //     Mostrar el jugador con menor puntuación.
+    //     Salir.
+
+    let nombresArray = ["Ana", "Luis", "María", "Carlos", "Sofía"]
+    let puntuacionesArray = [85, 92, 78, 90, 88]
+    let opcion
+    let nombre
+    let puntuacion
+    let salir=false
+
+
+    while (salir == false) {
+        opcion = prompt("opcion" + "1.Añadir un nuevo jugador (eliminando al más antiguo)2.Mostrar jugadores y puntuaciones3.Mostrar el jugador con mayor puntuación4.Mostrar el jugador con menor puntuación5.Salir.")
+
+
+
+        if (opcion == "1") {
+            nombre = prompt("Diga el nuevo nombre del jugador")
+            puntuacion = prompt("Ponga la puntuacion del jugador de antes")
+            nombresArray.push(nombre)
+            puntuacionesArray.push(puntuacion)
+            nombresArray.shift()
+            puntuacionesArray.shift()
+
+        } else if (opcion == "2") {
+            for (let i = 0; i < puntuacion.length; i++) {
+                if (puntuacion[i] < minimo) {
+                    minimo = puntuacion[i];
+                }
+
+            }
+            console.log("El valor minimo es: " + minimo)
+        } else if (opcion == "3") {
+            for (let i = 0; i < puntuacion.length; i++) {
+                sumaPuntuaciones += parseFloat(puntuacion[i]);
+                puntuacionMedia = sumaPuntuaciones / puntuacion.length
+            }
+            console.log("La suma media de puntuaciones es de " + puntuacionMedia);
+
+
+        } else if (opcion == "4") {
+            salir = true
+            console.log("Saliendo del programa");
+
+        } else {
+            console.log("Eso no es una opción")
+        }
+    }
+
+
+
+
+
+</script>
