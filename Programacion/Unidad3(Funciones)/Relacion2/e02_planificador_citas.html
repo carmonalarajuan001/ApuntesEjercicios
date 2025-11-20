@@ -1,0 +1,33 @@
+<script>
+
+function citasSolapadas(comienzo1, final1, comienzo2, final2) {
+    
+    let mensaje
+    if (final1>comienzo2) {
+        mensaje="La primera termina después de que empiece la segunda, " + final1 + " > " + comienzo2
+    }
+    else{
+        mensaje="No se solapa ninguna cita"
+    }
+    if (comienzo1>final1||comienzo2>final2) {
+        mensaje="No tienen sentido las horas de comienzo y fin de alguna de tus citas"
+    } 
+        
+    
+    return mensaje
+}
+
+
+
+
+
+let seSolapan = citasSolapadas("14:00", "15:30", "15:40", "13:00");
+console.log(seSolapan)
+
+
+
+
+</script>
+
+
+

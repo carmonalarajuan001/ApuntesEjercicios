@@ -1,0 +1,28 @@
+<script>
+    
+function generarUsuario(nombre, apellido) {
+    let nombreUsuario = ""
+    let numeroRandom = 0
+    nombre= nombre.toLowerCase()
+
+    for (let i = 0; i < 3 && nombre.length; i++) {
+        nombreUsuario+=nombre[i]
+        
+    }
+    apellido= apellido.toLowerCase()
+    for (let i = 0; i < 3&& apellido.length; i++) {
+        nombreUsuario+=apellido[i]
+        
+    }
+    numeroRandom=Math.floor(Math.random() * (999 - 100 + 1)) + 100
+    nombreUsuario+=numeroRandom
+    return nombreUsuario
+
+}
+
+
+
+
+console.log(generarUsuario("Juan", "Perez"))
+
+</script>
