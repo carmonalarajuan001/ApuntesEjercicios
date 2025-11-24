@@ -1,0 +1,35 @@
+<script>
+
+    function simularClimaSemana(estacionAño) {
+        let arrayClima = []
+        let temperaturaMax
+        let temperaturaMin
+        let probLluvia
+        let arrayClimaFinal=[]
+
+        if (estacionAño == "verano") {
+            for (let i = 0; i < 7; i++) {               
+                temperaturaMax = Math.floor(Math.random() * (40 - 25 + 1)) + 25
+                temperaturaMin = Math.floor(Math.random() * (25 - 15 + 1)) + 15
+                probLluvia = Math.floor(Math.random() * (50 + 1))
+                arrayClima.push(temperaturaMax, temperaturaMin, probLluvia)
+
+            }
+        }else {
+            for (let i = 0; i < 7; i++) {               
+                temperaturaMax = Math.floor(Math.random() * (15 - (-5) + 1)) + (-5)
+                temperaturaMin = Math.floor(Math.random() * ( 5 - (-15) + 1)) + (-15)
+                probLluvia = Math.floor(Math.random() * (100 - 50 + 1)) + 50
+                arrayClima.push(temperaturaMax, temperaturaMin, probLluvia)                 
+        }
+    }
+    for (let i = 0; i < arrayClima.length; i += 3) {
+    arrayClimaFinal.push(arrayClima.slice(i, i + 3));
+}
+    return arrayClimaFinal
+}
+    //--------------------MAIN-------------------
+    const simulacionSemana = simularClimaSemana("invierno")
+    console.log(simulacionSemana)
+
+</script>

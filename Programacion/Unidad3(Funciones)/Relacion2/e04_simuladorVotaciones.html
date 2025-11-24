@@ -1,12 +1,26 @@
 <script>
 
-function simuladorVotaciones(listaCandidatos) {
-    
-}
+    function simuladorVotaciones(listaCandidatos) {
+        let numeroAleatorio1
+        let numeroAleatorio2
+        let numeroAleatorio3
+        let listaCandidatosProbabilidad = []
+        listaCandidatos = listaCandidatosProbabilidad
+
+        numeroAleatorio1 = Math.floor(Math.random() * 101)
+        listaCandidatosProbabilidad.push(numeroAleatorio1)
+        numeroAleatorio2=Math.floor(Math.random() * (101 - numeroAleatorio1)) 
+        listaCandidatosProbabilidad.push(numeroAleatorio2)
+        numeroAleatorio3=100-numeroAleatorio1-numeroAleatorio2
+        listaCandidatosProbabilidad.push(numeroAleatorio3)
+
+        return listaCandidatosProbabilidad
+    }
 
 
 
 
     const candidatos = ["Juan", "Sofía", "Carlos"];
-    simularVotaciones(candidatos);
+    console.log(candidatos)
+    console.log(simuladorVotaciones(candidatos))
 </script>

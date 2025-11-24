@@ -1,0 +1,21 @@
+<script>
+
+function analizarTexto(textoUsuario) {
+    let arrayPalabrasCaracteresPromedio=[]
+    let palabras = textoUsuario.split(" ");
+    let totalPalabras = palabras.length;
+    arrayPalabrasCaracteresPromedio.push(totalPalabras)
+    arrayPalabrasCaracteresPromedio.push(textoUsuario.length)
+    let promedioPalabras=textoUsuario.length/totalPalabras
+    arrayPalabrasCaracteresPromedio.push(promedioPalabras)
+    return arrayPalabrasCaracteresPromedio
+}
+
+//------------------MAIN---------------------
+const texto = "Hola mundo mundo programacion es increible increible increible";
+console.log(analizarTexto(texto));
+
+
+
+
+</script>

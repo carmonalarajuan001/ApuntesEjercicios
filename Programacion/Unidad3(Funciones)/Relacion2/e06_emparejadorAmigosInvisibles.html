@@ -1,0 +1,25 @@
+<script>
+
+    function emparejarAmigos(colegas) {
+        let amigosInvisibles=[]
+        let amigoAleatorio1
+        let amigoAleatorio2
+        for (let i = 0; i < colegas.length/2; i++) {
+            amigoAleatorio1=Math.floor(Math.random() * colegas.length)
+            amigoAleatorio2=Math.floor(Math.random() * colegas.length)
+
+            amigosInvisibles.push(colegas[amigoAleatorio1])
+            amigosInvisibles.push(colegas[amigoAleatorio2])
+            
+        }
+        return amigosInvisibles
+    }
+
+
+//-----------------------MAIN------------------------
+
+const amigos = ["Ana", "Luis", "Marta", "Pedro", "Elena", "Carlos"];
+console.log(emparejarAmigos(amigos));
+
+
+</script>
