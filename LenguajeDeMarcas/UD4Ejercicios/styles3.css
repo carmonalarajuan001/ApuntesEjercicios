@@ -1,0 +1,11 @@
+* {
+    margin: 0px;
+}
+
+ div > li{
+    color: darksalmon;
+ }
+
+ p + li {
+    background-color: mediumspringgreen;
+ }
