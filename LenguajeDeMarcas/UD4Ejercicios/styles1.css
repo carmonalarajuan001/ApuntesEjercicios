@@ -1,12 +1,15 @@
-html{
+*{
     color: bisque;
-}
-
-body{
-    background-color: linear-gradient aliceblue aqua;
-}
-
-* {
     margin: 30px;
     padding: 30px;
 }
+
+body{
+    background: linear-gradient(red, green )
+    
+
+}
+body{
+    background-repeat: no-repeat;
+}
+

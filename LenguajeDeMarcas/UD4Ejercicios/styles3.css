@@ -2,10 +2,10 @@
     margin: 0px;
 }
 
- div > li{
+ div > ul > li{
     color: darksalmon;
  }
 
- p + li {
+ div + p {
     background-color: mediumspringgreen;
  }

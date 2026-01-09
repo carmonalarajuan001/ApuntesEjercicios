@@ -1,11 +1,12 @@
-title{
+h2{
     color: brown;
 }
 
 section{
     background-image: url('cr7.jpeg');
+    background-size: cover;
 }
 
-p{
-    
+p:hover{
+    color: blue;
 }

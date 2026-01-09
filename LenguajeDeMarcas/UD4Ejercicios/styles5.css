@@ -1,0 +1,10 @@
+h1, h2, p {
+    font-family: "Sofia", sans-serif;;
+}
+h2{
+    font-size: 20;
+}
+blockquote{
+    font-style: italic, bold;
+    color: darkgreen;
+}
