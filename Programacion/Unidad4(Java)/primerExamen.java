@@ -37,35 +37,41 @@ public class primerExamen {
                 arroz = 120 * unidades;
                 agua = 0.10 * unidades;
                 coste = 8 * unidades;
-                sumaMaki += unidades;
             } 
             else if (tipo.equals("nigiri")) {
                 arroz = 50 * unidades;
                 agua = 0.05 * unidades;
                 coste = 10 * unidades;
-                sumaNigiri += unidades;
             } 
             else if (tipo.equals("sashimi")) {
                 arroz = 0;
                 agua = 0.02 * unidades;
                 coste = 12 * unidades;
-                sumaSashimi += unidades;
             }
 
-            // Comprobar stock antes de aceptar el pedido
-            if (sumaTotalArroz + arroz > stockArroz || sumaTotalAgua + agua > stockAgua) {
+            //variable para controlar si el pedido es válido
+            boolean pedidoValido = true;
+
+            if ((sumaTotalArroz + arroz) > stockArroz || (sumaTotalAgua + agua) > stockAgua) {
                 System.out.println("❌ Stock insuficiente. Pedido cancelado.");
-                break;
+                pedidoValido = false;
             }
 
-            sumaTotalArroz += arroz;
-            sumaTotalAgua += agua;
-            cajaTotal += coste;
+            //solo se acumula si el pedido es válido
+            if (pedidoValido) {
+                sumaTotalArroz += arroz;
+                sumaTotalAgua += agua;
+                cajaTotal += coste;
 
-            System.out.println("Plato: " + tipo + " | Unidades: " + unidades + " | Importe: " + coste + " €");
-            System.out.println("Arroz pedido: " + arroz + " g | Acumulado: " + sumaTotalArroz);
-            System.out.println("Agua pedido: " + agua + " L | Acumulado: " + sumaTotalAgua);
-            System.out.println("---------------------------------");
+                if (tipo.equals("maki")) sumaMaki += unidades;
+                else if (tipo.equals("nigiri")) sumaNigiri += unidades;
+                else if (tipo.equals("sashimi")) sumaSashimi += unidades;
+
+                System.out.println("Plato: " + tipo + " | Unidades: " + unidades + " | Importe: " + coste + " €");
+                System.out.println("Arroz pedido: " + arroz + " g | Acumulado: " + sumaTotalArroz);
+                System.out.println("Agua pedido: " + agua + " L | Acumulado: " + sumaTotalAgua);
+                System.out.println("---------------------------------");
+            }
         }
 
         double arrozRestante = stockArroz - sumaTotalArroz;
@@ -79,10 +85,7 @@ public class primerExamen {
         System.out.println("Agua restante: " + aguaRestante + " L");
         System.out.println("Caja total: " + cajaTotal + " €");
 
-        if (arrozRestante >= 0 && aguaRestante >= 0)
-            System.out.println("Registro completado con éxito ✅");
-        else
-            System.out.println("Registro interrumpido por falta de stock ❌");
+        System.out.println("Registro completado ✅");
 
         sc.close();
     }
