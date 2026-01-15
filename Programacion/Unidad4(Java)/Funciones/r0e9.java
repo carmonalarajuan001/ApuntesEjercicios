@@ -14,8 +14,8 @@ public class r0e9 {
     }
 
     public static void main(String[] args) {
-        int ejercicio9=menorDeTres(5, 7, 1);
-        System.out.println("El menor de los tres números es " + ejercicio9);
+        int menorDeTresNumeros=menorDeTres(5, 7, 1);
+        System.out.println("El menor de los tres números es " + menorDeTresNumeros);
 
     }
 
