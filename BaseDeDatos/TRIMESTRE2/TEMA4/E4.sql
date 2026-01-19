@@ -72,42 +72,47 @@ INSERT INTO venta VALUES
 
 -- Relación de ejercicios prácticos
 
--- 1. Encuentra el número total de empleados por departamento.
+-- 1. Número total de empleados por departamento
+SELECT departamento, COUNT(*) AS total_empleados FROM empleado GROUP BY departamento;
 
--- 2. Calcula el salario promedio por ciudad, mostrando solo las ciudades con un salario promedio mayor a 4000.
+-- 2. Salario promedio por ciudad (solo > 4000)
+SELECT ciudad, AVG(salario) AS salario_promedio FROM empleado GROUP BY ciudad HAVING AVG(salario) > 4000;
 
--- 3. Encuentra el total de ventas por cada cliente.
+-- 3. Total de ventas por cliente
+SELECT cliente, SUM(importe) AS total_ventas FROM venta GROUP BY cliente;
 
+-- 4. Departamentos con más de 3 empleados
+SELECT departamento, COUNT(*) AS total_empleados FROM empleado GROUP BY departamento HAVING COUNT(*) > 3;
 
--- 4. Muestra los departamentos con más de 3 empleados.
+-- 5. Promedio de edad de los empleados por ciudad
+SELECT ciudad, AVG(edad) AS promedio_edad FROM empleado GROUP BY ciudad;
 
+-- 6. Ciudades donde hay empleados (sin duplicados)
+SELECT DISTINCT ciudad FROM empleado;
 
--- 5. Calcula el promedio de edad de los empleados por ciudad.
+-- 7. Número total de ventas y suma de importes
+SELECT COUNT(*) AS total_ventas, SUM(importe) AS suma_importes FROM venta;
 
--- 6. Muestra las ciudades en las que hay empleados, sin duplicados.
+-- 8. Cliente con la venta más baja
+SELECT cliente, importe FROM venta WHERE importe = (SELECT MIN(importe) FROM venta);
 
--- 7. Muestra el número total de ventas y la suma total de importes.
+-- 9. Cliente con la venta de mayor importe
+SELECT cliente, importe FROM venta WHERE importe = (SELECT MAX(importe) FROM venta);
 
+-- 10. Empleados con salario mayor al promedio de todos los salarios
+SELECT nombre, salario FROM empleado WHERE salario > (SELECT AVG(salario) FROM empleado);
 
--- 8. Encuentra el/los cliente/clientes con la venta más baja.
+-- Subconsulta 1: Nombres de empleados que trabajan en departamentos existentes
+SELECT nombre FROM empleado WHERE departamento IN (SELECT nombre FROM departamento);
 
+-- Subconsulta 2: Empleados con salario > 4000 (mostrar nombre y salario)
+SELECT nombre, salario FROM empleado WHERE salario > 4000;
 
--- 9. Encuentra el cliente que realizó la venta de mayor importe.
+-- Subconsulta 3: Nombre del empleado con el salario más alto
+SELECT nombre FROM empleado WHERE salario = (SELECT MAX(salario) FROM empleado);
 
+-- Subconsulta 4: Departamentos con salario promedio > 5000
+SELECT departamento, AVG(salario) AS salario_promedio FROM empleado GROUP BY departamento HAVING AVG(salario) > 5000;
 
--- 10. Encuentra los empleados con un salario mayor al promedio de todos los salarios.
-
--- Ejercicios de Subconsultas
-
--- 1. Lista los nombres de empleados que trabajan en departamentos existentes en la tabla departamento.
-
--- 2. Encuentra todos los empleados cuyo salario sea mayor a 4000 y muestra su nombre y salario.
-
-
--- 3. Encuentra el nombre del empleado con el salario más alto.
-
-
--- 4. Calcula el promedio de salarios por departamento y muestra los departamentos con un salario promedio mayor a 5000.
-
-
--- 5. Encuentra los clientes que han realizado ventas superiores al promedio de todas las ventas.
+-- Subconsulta 5: Clientes con ventas superiores al promedio de todas las ventas
+SELECT DISTINCT cliente FROM venta WHERE importe > (SELECT AVG(importe) FROM venta);
