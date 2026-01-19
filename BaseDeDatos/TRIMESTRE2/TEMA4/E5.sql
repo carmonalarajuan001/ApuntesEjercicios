@@ -80,26 +80,30 @@ SELECT ROUND(presupuesto_asignado, -6) AS presupuesto_redondeado FROM Actividade
 SELECT 
 
 -- 8. Obtener el entero más cercano hacia abajo y hacia arriba de los presupuestos de los ministerios.
-
+SELECT 
 
 -- 9. Generar un número aleatorio para asignar un identificador único temporal a cada actividad.
 
 
 -- Ejercicios de Funciones de Fecha y Hora
 -- 10. Calcular la antigüedad de cada ministerio en años.
-
+SELECT DATEDIFF(NOW(), fecha_creacion) AS antiguedad FROM Ministerio;
 -- Para mi esta es la mejor:
 
 -- 11. Formatear las fechas de inicio y fin de las actividades en formato "DD-MM-YYYY".
 
--- 12. Calcular cuántos días faltan para que termine cada actividad.
 
+-- 12. Calcular cuántos días faltan para que termine cada actividad.
+SELECT nombre AS descripcion_actividad, DATEDIFF(fecha_fin, NOW()) AS dias_restantes FROM Actividad
 -- 13. Extraer el mes y el año de las fechas de nacimiento de los ciudadanos.
+SELECT EXTRACT(YEAR, fecha_nacimiento) AS año_ciudadanos 
+EXTRACT(MONTH, fecha_nacimiento) AS mes_ciudadanos
+FROM Ciudadanos
 
 -- Para mi la mejor es:
 
 -- 14. Filtrar ciudadanos nacidos después del año 1990.
-SELECT nombre FROM Ciudadano WHERE fecha_nacimiento > 1990;
+SELECT nombre FROM Ciudadano WHERE YEAR(fecha_nacimiento) > 1990;
 
 -- 15. Calcular el tiempo total en días que dura cada actividad gubernamental.
 SELECT DATEDIFF(fecha_fin, fecha_inicio) AS tiempo_total FROM Actividad;
