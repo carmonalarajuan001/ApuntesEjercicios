@@ -82,16 +82,16 @@ SELECT ciudad, AVG(salario) AS salario_promedio FROM empleado GROUP BY ciudad HA
 SELECT cliente, SUM(importe) AS total_ventas FROM venta GROUP BY cliente;
 
 -- 4. Departamentos con más de 3 empleados
-SELECT departamento, COUNT(*) AS total_empleados FROM empleado GROUP BY departamento HAVING COUNT(*) > 3;
+SELECT departamento FROM empleado GROUP BY departamento HAVING COUNT(departamento) > 3;
 
 -- 5. Promedio de edad de los empleados por ciudad
-SELECT ciudad, AVG(edad) AS promedio_edad FROM empleado GROUP BY ciudad;
+SELECT AVG(edad) FROM empleado GROUP BY ciudad;
 
 -- 6. Ciudades donde hay empleados (sin duplicados)
-SELECT DISTINCT ciudad FROM empleado;
+SELECT ciudad FROM empleado GROUP BY ciudad having count (id) > 0;
 
 -- 7. Número total de ventas y suma de importes
-SELECT COUNT(*) AS total_ventas, SUM(importe) AS suma_importes FROM venta;
+SELECT COUNT(*) AS total_ventas FROM venta, SUM(importe) AS suma_importes FROM venta;
 
 -- 8. Cliente con la venta más baja
 SELECT cliente, importe FROM venta WHERE importe = (SELECT MIN(importe) FROM venta);

@@ -61,10 +61,10 @@ VALUES
 SELECT CONCAT(nombre, ' ', apellido) AS nombre_completo FROM Ciudadano;
 
 -- 2. Obtener las primeras 3 letras de los nombres de los ciudadanos.
-SELECT LEFT(nombre, 3) AS primeras_letras_nombre from ciudadano
+SELECT substring(nombre, 1, 3) AS primeras_letras_nombre from Ciudadano;
 
 -- 3. Calcular la longitud de los nombres de los ciudadanos.
-SELECT LENGTH(nombre) AS longitud_nombre FROM Ciudadano
+SELECT CHAR_LENGTH(nombre) AS longitud_nombre FROM Ciudadano
 
 -- 4. Reemplazar la palabra "hospitales" por "clínicas" en las descripciones de actividades.
 SELECT REPLACE(descripcion, 'hospitales', 'clinicas') FROM Actividad;
@@ -74,13 +74,13 @@ SELECT TRIM(nombre) AS nombre_sin_espacios FROM Ministerio
 
 -- Ejercicios de Funciones NuEXTRACTméricas
 -- 6. Redondear el presupuesto de las actividades a millones.
-SELECT ROUND(presupuesto_asignado, -6) AS presupuesto_redondeado FROM Actividades
+SELECT ROUND(presupuesto_asignado/1000000) AS presupuesto_en_millones FROM Actividades
 
 -- 7. Calcular la diferencia entre los ingresos anuales de cada ciudadano y el promedio de ingresos.
-SELECT 
+SELECT nombre, (select ingresos_anuales AVG((ingresos_anuales) from Ciudadano)) AS diferencia_al_promedio FROM Ciudadano ORDER BY ingresos_anuales
 
--- 8. Obtener el entero más cercano hacia abajo y hacia arriba de los presupuestos de los ministerios.
-SELECT 
+-- 8. Obtener el entero más cercano hacia abajo y hacia arriba de los presupuestos de los ministerios. PROBABLE QUE LO PONGA
+SELECT floor(presupuesto) as red_abajo, ceil(presupuesto) as red_arriba FROM ministerio 
 
 -- 9. Generar un número aleatorio para asignar un identificador único temporal a cada actividad.
 
