@@ -123,32 +123,69 @@ SELECT COUNT(*) peliculas order by genero
 select nombre from director where fecha_nacimiento < 1950
 
 -- 10. Listar los títulos de las películas y su duración ordenados de mayor a menor.
-select titulo ()
+SELECT titulo, duracion
+FROM pelicula
+ORDER BY duracion DESC;
 
 -- 12. Seleccionar las películas cuya duración está entre 120 y 180 minutos.
-
+SELECT titulo, duracion
+FROM pelicula
+WHERE duracion BETWEEN 120 AND 180;
 
 -- 13. Mostrar los títulos de las películas ordenados por año de estreno.
+SELECT titulo, anio
+FROM pelicula
+ORDER BY anio;
 
 
 -- 14. Calcular el promedio de duración de las películas.
+SELECT AVG(duracion) AS promedio_duracion
+FROM pelicula;
 
 -- 15. Mostrar los actores que no nacieron en EE.UU.
+SELECT nombre
+FROM actor
+WHERE pais_origen <> 'EE.UU.';
 
 
 -- 17. Mostrar el id de las películas que tienen más de un actor en su reparto.
+SELECT id_pelicula
+FROM reparto
+GROUP BY id_pelicula
+HAVING COUNT(id_actor) > 1;
 
 
 -- 18. Calcular el número total de actores en la base de datos.
+SELECT COUNT(*) AS total_actores
+FROM actor;
 
 
 -- 19. Mostrar las películas que no tienen actores en el reparto.
+SELECT p.id, p.titulo
+FROM pelicula p
+LEFT JOIN reparto r ON p.id = r.id_pelicula
+WHERE r.id_pelicula IS NULL;
 
 -- 20. Seleccionar las películas estrenadas en los últimos 10 años.
+SELECT titulo, anio
+FROM pelicula
+WHERE anio >= YEAR(CURDATE()) - 10;
+
 
 
 -- 21. dime la mediana del año de estreno de las peliculas.
 
 -- 22 dime la moda del año de nacimiento de los actores.
+SELECT anio_nacimiento
+FROM actor
+GROUP BY anio_nacimiento
+ORDER BY COUNT(*) DESC
+LIMIT 1;
+
+-- LIMIT ya que el primero es el que mas se repite
 
 -- 23 dime la media de edad de los actores agrupados por pais de nacimiento.
+SELECT pais_origen,
+    AVG(YEAR(CURDATE()) - anio_nacimiento) AS edad_media
+FROM actor
+GROUP BY pais_origen;
