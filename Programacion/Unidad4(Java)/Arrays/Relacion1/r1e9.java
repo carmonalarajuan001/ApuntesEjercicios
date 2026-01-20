@@ -6,7 +6,7 @@ public class r1e9 {
         cola.add("cliente2");
         cola.add("cliente3");
         System.out.println("Cola inicial: " + cola);
-        String clienteAtendido = cola.remove(0);
+        String clienteAtendido = cola.remove(0);//removefirst() también vale
         System.out.println("Cliente atendido: " + clienteAtendido);
         System.out.println("Cola ahora: " + cola);
         clienteAtendido = cola.remove(0);
