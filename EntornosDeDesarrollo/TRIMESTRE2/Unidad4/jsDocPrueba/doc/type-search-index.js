@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"EntornosDeDesarrollo.TRIMESTRE2.Unidad4.jsDocPrueba","l":"cadena"}];updateSearchResults();
