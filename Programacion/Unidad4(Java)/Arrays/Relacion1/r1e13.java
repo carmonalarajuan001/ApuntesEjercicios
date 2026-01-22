@@ -10,6 +10,7 @@ public class r1e13 {
         while (!letras.isEmpty()) {
             invertido.add(letras.remove(letras.size() - 1)); // simula pop
         }
+        //hacemos una copia al principio del array por si me pide el array original tb
         System.out.println("Array invertido: " + invertido);
     }
     
