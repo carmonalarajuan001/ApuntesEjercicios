@@ -1,0 +1,38 @@
+.header {
+  display: flex; /* Usamos flex para alinear h1 y nav */
+  justify-content: space-between; /* h1 a la izquierda, menú a la derecha */
+  align-items: center; /* Centrar verticalmente */
+  background-color: #1e90ff; /* Color de fondo del header */
+  color: white;
+}
+
+/* Quitar estilos por defecto del ul */
+.menuArriba {
+  list-style: none; /* Quitar los puntos */
+  display: flex; /* Hsacer los li en fila */
+  gap: 20px; /* Separación entre los items */
+}
+.menuArriba li a {
+  text-decoration: none; /* Quitar subrayado */
+  color: white;
+  display: block; /* Todo el recuadro es clicable */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.menuArriba li a:hover {
+  background-color: cornflowerblue;
+}
+.section-centrada {
+  text-align: center;
+}
+.boton {
+  background-color: cyan;
+  padding: 10px;
+}
+
+.peliculas{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
