@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   display: flex; /* Usamos flex para alinear h1 y nav */
   justify-content: space-between; /* h1 a la izquierda, menú a la derecha */
@@ -24,15 +29,48 @@
 }
 .section-centrada {
   text-align: center;
+  background-image: url(https://picsum.photos/seed/picsum/1200/600);
+  padding: 60px 20px;
 }
-.boton {
-  background-color: cyan;
-  padding: 10px;
+
+.boton{
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+}
+.boton :hover{
+  transform: scale(1.1);
 }
 
 .peliculas{
 display: flex;
 justify-content: space-between;
 align-items: center;
-
 }
+
+.personajes{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+   gap: 20px;
+}
+
+.personaje1{
+background-color: aqua;
+}
+.personaje2{
+  background-color: aquamarine;
+}
+.personaje3{
+  background-color: beige;
+}
+.personaje4{
+  background-color: bisque;
+}
+
+.eventos ul {
+  list-style: none;
+}
+

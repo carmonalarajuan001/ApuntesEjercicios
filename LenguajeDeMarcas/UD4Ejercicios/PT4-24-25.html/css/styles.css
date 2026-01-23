@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  /* Usamos flex para alinear h1 y nav */
+  justify-content: space-between;
+  /* h1 a la izquierda, menú a la derecha */
+  align-items: center;
+  /* Centrar verticalmente */
+  background-color: goldenrod;
+  /* Color de fondo del header */
+  color: white;
+  padding: 20px;
+}
+
+.menu-botones {
+  list-style: none; /* Quitar los puntos */
+  display: flex; /* Hsacer los li en fila */
+  gap: 30px; /* Separación entre los items */
+}
+
+.menu-botones li a {
+  text-decoration: none;
+}
+
+.menu-botones li a:hover {
+  background-color: yellow;
+}
+
+.section-perfil img{
+  width: 150px;
+  height: 150px; /*PARA IMAGEN CIRCULAR*/
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.section-perfil{
+    display: flex;
+    gap: 20px;
+}
+
+.section-perfil p{
+    background-color: grey;
+}
