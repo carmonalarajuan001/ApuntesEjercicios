@@ -86,3 +86,4 @@ Punto a punto:
 10. Clasifique los siguientes servicios como orientados a conexión / no orientados a conexión y confirmados /sin confirmación. Justifique la respuesta. a. Correo postal ordinario b. Correo certificado c. Envío y recepción de fax d. Conversación telefónica
 Ejercicio extra:
 7. ¿Cuál es el tiempo necesario en enviar un paquete de 1000 Bytes, incluidos 50 Bytes de cabecera, por un enlace de 100 Mbps y 10Km? ¿cuál es el tiempo mínimo desde que se envía hasta que se recibe confirmación? ¿qué relación hay entre este tiempo y los temporizadores en, por ejemplo, las capas de enlace y transporte?
+Prueba
