@@ -34,8 +34,10 @@ class CuentaBancaria {
     }
 
     void retirar(double cantidad) {
-        if (cantidad <= this.saldo) {
+        if (saldo-cantidad >= 0) {
             this.saldo = this.saldo - cantidad;
+        } else{
+            System.out.println("No hay suficiente dinero");
         }
     }
 }

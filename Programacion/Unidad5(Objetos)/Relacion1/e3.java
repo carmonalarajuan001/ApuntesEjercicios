@@ -28,10 +28,13 @@ class Alumno {
     }
 
     boolean aprobo() {
-        if (this.calificacion >= 6) {
-            return true;
-        } else {
-            return false;
-        }
+        boolean aprobado;
+        //if (this.calificacion >= 6) {
+        //    aprobado=true;
+        //} else {
+        //    aprobado=false;
+        //}
+        //return aprobado;
+        return (calificacion>=6.0);
     }
 }
