@@ -84,3 +84,8 @@ LEFT JOIN declaraciones d ON c.id_contribuyente = d.id_contribuyente
 WHERE d.id_contribuyente IS NULL;
 
 -- 6. Diferencias a pagar o devolver por contribuyente
+
+SELECT c.nombre, c.apellidos, SUM(d.diferencia) AS total_diferencia
+FROM contribuyentes c
+LEFT JOIN declaraciones d ON c.id_contribuyente = d.id_contribuyente
+GROUP BY c.id_contribuyente;
