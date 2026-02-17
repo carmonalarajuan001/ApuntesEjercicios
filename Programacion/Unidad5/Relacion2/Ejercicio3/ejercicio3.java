@@ -16,6 +16,7 @@ public class ejercicio3 {
         6.99, 
         30);
 
+        supermercado Alsara=new supermercado();
 
         System.out.println(champuHS); 
         System.out.println(champuPantene);
@@ -30,6 +31,11 @@ public class ejercicio3 {
 
         champuHS.setDescripcion("Huele fatal");
         System.out.println(champuHS.getDescripcion());
+        Alsara.eliminarProducto(champuHS);
+
+        Alsara.agregarProducto(champuHS);
+        Alsara.agregarProducto(champuPantene);
+        System.out.println(Alsara);
     }
     
 }
