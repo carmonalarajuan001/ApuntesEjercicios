@@ -119,3 +119,26 @@ Etiqueta	Qué hace
 {@code}	Texto en formato código
 @version	Indica versión
 {@value}	Inserta valor de constante
+
+
+/**
+ * [Descripción breve del método].
+ *
+ * <p>[Explicación más detallada de lo que hace el método, 
+ * incluyendo fórmulas o detalles importantes.]</p>
+ *
+ * @param [param1] [Descripción del parámetro 1].
+ * @param [param2] [Descripción del parámetro 2].
+ * @return [Descripción del valor que retorna el método].
+ *
+ * @author Juan Carmona
+ * @version 1.0
+ * @since 2026-02-18
+ * @see [Referencia a otra clase o método relacionado]
+ * @deprecated [Razón por la que está obsoleto, si aplica]
+ * {@link [Enlace a otra clase o recurso]}
+ * {@linkplain [Enlace con estilo de texto normal]}
+ * {@value [Constante utilizada, si aplica]}
+ * {@code [Fragmento de código o fórmula]}
+ * {@inheritDoc}
+ */
