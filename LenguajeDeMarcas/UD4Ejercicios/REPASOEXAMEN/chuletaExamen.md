@@ -150,3 +150,135 @@ Si algo no te sale perfecto:
 
 En examen práctico valoran más que esté aplicado que que sea “bonito”.
 
+🧠 Idea básica
+
+Tienes un contenedor padre y dentro varios hijos.
+
+Cuando al contenedor le pones:
+
+display: flex;
+
+
+Automáticamente:
+
+Los hijos se ponen en fila (uno al lado del otro).
+
+Se alinean mejor.
+
+Puedes controlar cómo se distribuyen.
+
+🔑 Propiedades MÁS importantes
+1️⃣ flex-direction
+
+Define la dirección de los elementos.
+
+flex-direction: row;        /* horizontal (por defecto) */
+flex-direction: column;     /* vertical */
+
+
+👉 row = izquierda → derecha
+👉 column = arriba → abajo
+
+2️⃣ justify-content
+
+Controla cómo se distribuyen los elementos en la dirección principal.
+
+Si es row, será horizontal.
+
+justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+
+Ejemplos:
+
+center → centra todo
+
+space-between → espacio entre elementos
+
+space-around → espacio alrededor
+
+space-evenly → espacio igual para todos
+
+3️⃣ align-items
+
+Alinea los elementos en la dirección contraria.
+
+Si es row, esto controla verticalmente.
+
+align-items: center;
+align-items: flex-start;
+align-items: flex-end;
+
+
+👉 Muy usado para centrar verticalmente.
+
+🎯 Cómo centrar algo PERFECTAMENTE
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+🔥 Esto centra horizontal y verticalmente.
+
+📦 Propiedades para los hijos
+flex
+
+Controla cuánto espacio ocupa un hijo.
+
+flex: 1;
+
+
+👉 Todos con flex: 1 ocupan el mismo espacio.
+
+Si uno tiene:
+
+flex: 2;
+
+
+👉 Ese ocupará el doble que los demás.
+
+🧩 Ejemplo completo
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  flex: 1;
+}
+
+## 🚀 Resumen ultra rápido
+
+display: flex; → activa flexbox
+
+flex-direction → fila o columna
+
+justify-content → distribuye horizontal
+
+align-items → alinea vertical
+
+flex → controla tamaño de hijos
+## Para imagen
+.seccion {
+  background-image: url("fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;}
+
+  Sin wrap (por defecto)
+flex-wrap: nowrap;
+
+
+👉 Los elementos NO bajan.
+👉 Se aplastan para intentar caber en la misma fila.
+
+🔹 Con wrap
+flex-wrap: wrap;
+
+
+👉 Si no caben, bajan a la siguiente línea.
+👉 Como si fuera texto cuando llega al borde.
