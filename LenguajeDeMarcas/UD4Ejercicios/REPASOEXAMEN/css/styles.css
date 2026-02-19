@@ -1,0 +1,317 @@
+    /* 1. Quitar margenes y padding a todos los ELEMENTOS USANDO EL SELECTOR NIVERSAL*
+    2. APLICAR BOX-SIZING Y border-box usando el selector universal.
+    3. Definir una tipografía para el cuerpo del documento. 
+    4 Definir una tipografía distinta para los títulos (h1, h2, h3).
+    5.Establecer un color de fondo general para la página. 
+    /* 6.Establecer un color base de texto. */
+    /* 7.Limitar el ancho máximo del contenido usando la clase wrap. 
+    8 Centrar el contenido horizontalmente. Añadir separación interior lateral al contenedor principal. 
+
+    2. Cabecera (header.topbar) 
+    1.Colocar el título y la navegación en la misma línea usando Flexbox. 
+    2.Separarlos correctamente. 
+    3.Permitir que el contenido pueda ajustarse si el ancho disminuye (sin usar responsive).
+    4.Quitar las viñetas de nav__list. 
+    5. Colocar los enlaces del menú en horizontal usando Flexbox. 
+    6.Quitar el subrayado de los enlaces. 
+    7. Aplicar un efecto visual al pasar el ratón sobre .nav__link. 
+    8.Estilizar. nav__link--active para que se vea como sección activa.
+    9. Añadir un separador visual inferior a la cabecera. 
+    
+    3. Portada principal (section.hero)  
+    1. Convertir la portada en un bloque visual destacado. 
+    2.Añadir un fondo usando background-image (imagen o degradado). 
+    3.Aplicar background-size yackground-position.
+    4. Organizar el contenido usando Flexbox en dirección vertical. 
+    5. Separar correctamente los elementos internos. 
+    6. Convertir hero__cta en un botón visual. ﻿﻿﻿ 
+    7.Aplicar un efecto :hover al botón. ﻿﻿﻿
+    8.Aplicar una transformación usando transform en el :hover */ 
+
+    /* 4. Crónica de los Cuartos (section.section--cards)
+    1. Colocar las tarjetas en fila usando Flexbox.
+    2. Permitir que las tarjetas bajen de línea cuando no quepan.
+    3. Hacer que el título ocupe toda la fila.
+    4. Dar a cada card aspecto de tarjeta: Fondo blanco, Bordes personalizados, separación interior. Bordes
+    redondeados
+    5. Aplicar una sombra suave. (Opcional)
+    6. Redondear las imágenes card__img.
+    * Estilizar el título usando el selector de hijo directo:
+    .card > card title
+    7. Estilizar el enlace card__link como botón.
+    8. Aplicar un efecto visual en thover.
+
+
+    5. Agrupaciones destacadas (section.section--groups)
+    1. Distribuir los bloques usando Flexbox.
+    2. Permitir salto de línea.
+    3. Dar estilo tipo tarjeta a cada group.
+    4. Aplicar un estilo diferente a cada tipo:
+    * group--coro, group--chirigota, group--comparsa y group--cuarteto
+    * Usar el selector de hermanos adyacentes para que:
+    group_img:hover + group_title cambie el estilo del título cuando se pase el ratón sobre la imagen.
+
+
+    6. Agenda (section.section--agenda)
+    1. Quitar viñetas al ul.
+    * Aplicar estilo a los elementos usando el selector:
+    agenda > li
+    2. Dar estilo tipo tarjeta a cada elemento.
+    3. Destacar agenda__item--destacado con un estilo claramente diferente.
+    4. Convertir agenda__ time en una etiqueta visual redondeada.
+    5. Organizar el contenido interno en columna usando Flexbox.
+
+
+    7. Footer
+    1. Colocar el contenido en una misma línea usando Flexbox.
+    2. Permitir ajuste natural si el espacio disminuye.
+    3. Quitar viñetas a la lista.
+    4. Colocar los enlaces en horizontal.
+    5. Aplicar fondo oscuro.
+    6. Aplicar color claro al texto.
+    7. Aplicar efecto hover a social link.
+    esta es la otra parte y voy a pasarte el index */
+
+    /* 1 y 2. Reset universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3. Tipografía general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4; /* 5. Fondo general */
+    color: #222; /* 6. Color base texto */
+    line-height: 1.6;
+}
+
+/* 4. Tipografía distinta para títulos */
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* 7 y 8. Contenedor principal */
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto; /* centrar horizontal */
+    padding: 0 20px; /* separación lateral */
+}
+
+.topbar {
+    display: flex; /* 1 */
+    justify-content: space-between; /* 2 */
+    align-items: center;
+    flex-wrap: wrap; /* 3 */
+    padding: 20px;
+    border-bottom: 2px solid #ddd; /* 9 */
+    background-color: white;
+}
+
+/* 4 */
+.nav__list {
+    list-style: none;
+    display: flex; /* 5 */
+    gap: 20px;
+}
+
+/* 6 */
+.nav__link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* 7 */
+.nav__link:hover {
+    color: crimson;
+}
+
+/* 8 */
+.nav__link--active {
+    color: white;
+    background-color: crimson;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.hero {
+    margin: 40px 0;
+    padding: 60px 30px;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                      url("https://placehold.co/1200x500");
+    background-size: cover; /* 3 */
+    background-position: center;
+    color: white;
+
+    display: flex; /* 4 */
+    flex-direction: column;
+    gap: 20px; /* 5 */
+}
+
+/* 6 */
+.hero__cta {
+    display: inline-block;
+    background-color: crimson;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+/* 7 y 8 */
+.hero__cta:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.section {
+    margin: 60px 0;
+}
+
+.section--cards {
+    display: flex;
+    flex-wrap: wrap; /* 2 */
+    gap: 20px;
+}
+
+/* 3 */
+.section--cards .section__title {
+    flex: 0 0 100%;
+}
+
+/* 4 */
+.card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 5 opcional */
+}
+
+/* 6 */
+.card__img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* Selector hijo directo */
+.card > .card__title {
+    color: crimson;
+}
+
+/* 7 */
+.card__link {
+    margin-top: auto;
+    text-decoration: none;
+    background: crimson;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+/* 8 */
+.card__link:hover {
+    background: darkred;
+}
+
+.section--groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section--groups .section__title {
+    flex: 0 0 100%;
+}
+
+.group {
+    flex: 1 1 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilos distintos */
+.group--coro { border-left: 5px solid purple; }
+.group--chirigota { border-left: 5px solid orange; }
+.group--comparsa { border-left: 5px solid teal; }
+.group--cuarteto { border-left: 5px solid crimson; }
+
+/* Selector hermanos adyacentes */
+.group__img:hover + .group__title {
+    color: crimson;
+}
+
+.section--agenda .agenda {
+    list-style: none; /* 1 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* selector hijo directo */
+.agenda > li {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex; /* 5 */
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 3 */
+.agenda__item--destacado {
+    border: 2px solid crimson;
+    background: #fff5f5;
+}
+
+/* 4 */
+.agenda__time {
+    align-self: flex-start;
+    background: crimson;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem; 
+}
+
+.footer {
+    background: #222; /* 5 */
+    color: #eee; /* 6 */
+    padding: 30px;
+    display: flex; /* 1 */
+    flex-wrap: wrap; /* 2 */
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.social {
+    list-style: none; /* 3 */
+    display: flex; /* 4 */
+    gap: 15px;
+}
+
+.social__link {
+    text-decoration: none;
+    color: #eee;
+    transition: 0.3s;
+}
+
+/* 7 */
+.social__link:hover {
+    color: crimson;
+}
