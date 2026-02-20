@@ -17,6 +17,14 @@ public class Cine {
         peliculas.remove(pelicula);
     }
 
+    public double calcularDuracionMedia() {
+        double suma = 0;
+        for (Pelicula pelicula : peliculas) {
+            suma += Double.parseDouble(pelicula.getDuracion());
+        }
+        return suma / peliculas.size();
+    }
+
     @Override
     public String toString() {
         String stringPeliculas = "";

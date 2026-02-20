@@ -15,8 +15,7 @@ public class Pelicula {
 
     @Override
     public String toString() {
-        return "Nombre de la película: " + titulo + " Sinopsis: " + sinopsis + " Director: " + director + " Duración de la película: "
-                + duracion;
+        return titulo + " Sinopsis: " + sinopsis + " Director: " + director + " Duración de la película: " + duracion;
     }
     public String getTitulo() {
         return titulo;
