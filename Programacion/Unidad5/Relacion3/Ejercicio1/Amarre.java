@@ -10,31 +10,38 @@ public class Amarre {
     public Amarre(int numero, double longitudMaxima, double precioDia, boolean ocupado, String tipoAmarre) {
         this.numero = numero;
         this.longitudMaxima = longitudMaxima;
-        this.precioDia = precioDia;
         this.ocupado = ocupado;
         this.tipoAmarre = tipoAmarre;
+        calcularPrecioDia();
     }
 
     public int getNumero() {
         return numero;
     }
 
-    public void setNumero(){
-        if (numero>0) {
-            this.numero=numero;
-        }else{
-            System.out.println("Numero debe ser mayor que 0");
+    public boolean getOcupado() {
+    return ocupado;
+}
+    public void setNumero() {
+        if (numero > 0) {
+            this.numero = numero;
+        } else {
+            imprimirMensajeError("Numero debe ser mayor que 0");
         }
     }
 
-    public double getLongitudMaxima(){
+    private void imprimirMensajeError(String mensajeError){
+        System.err.println(mensajeError);
+    }
+
+    public double getLongitudMaxima() {
+        if (longitudMaxima == -1) {
+            imprimirMensajeError("Longitud maxima con valor erroneo al ser menos de 4.0M");
+        }
         return longitudMaxima;
     }
 
-
-
-
-    public void calcularPrecio() {
+    private void calcularPrecioDia() {
         if (tipoAmarre.equals("Normal")) {
             precioDia = 25 + (1.5 * longitudMaxima);
         } else if (tipoAmarre.equals("Premium")) {
@@ -45,31 +52,47 @@ public class Amarre {
             precioDia = 0;
         }
     }
+
     public void setLongitudMaxima(double longitudMaxima) {
         if (longitudMaxima >= 4.0) {
             this.longitudMaxima = longitudMaxima;
-            calcularPrecio(); // recalcular precio
+            calcularPrecioDia();
         } else {
-            System.out.println("La longitud mínima es 4.0 metros.");
+            //añado valor por defecto si falla el setlongitudmaxima a -1
+            //para cumplir las restriciones ya que 0 no seria valor añadido
+            this.longitudMaxima = -1;
+            precioDia = -1;
         }
     }
 
-    public void setTipoAmarre(String tipoAmarre){
+    public void setTipoAmarre(String tipoAmarre) {
         if (tipoAmarre.equals("Normal") ||
-            tipoAmarre.equals("Premium") ||
-            tipoAmarre.equals("Megayate")) {
+                tipoAmarre.equals("Premium") ||
+                tipoAmarre.equals("Megayate")) {
 
             this.tipoAmarre = tipoAmarre;
-            calcularPrecio(); // recalcular precio
         } else {
             System.out.println("Tipo de amarre no válido.");
         }
     }
+
     public String getTipoAmarre() {
         return tipoAmarre;
     }
 
-    public void ocupacionBarco(){
-        
+    public void setOcupado(boolean ocupado) {
+        this.ocupado=ocupado;
     }
+
+    @Override
+public String toString() {
+    return "El amarre número " + numero +
+           " es de tipo " + tipoAmarre +
+           ", tiene un precio por día de " + precioDia + " euros" +
+           " y actualmente está " + (getOcupado()) + ".";
+}
+
+    
+
+    
 }
