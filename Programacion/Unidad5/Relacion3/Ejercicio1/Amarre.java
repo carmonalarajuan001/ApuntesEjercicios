@@ -1,6 +1,8 @@
 package Programacion.Unidad5.Relacion3.Ejercicio1;
 
 public class Amarre {
+
+     private static int numeroAmarres;
     private int numero;
     private double longitudMaxima;
     public double precioDia;
@@ -11,8 +13,14 @@ public class Amarre {
         this.numero = numero;
         this.longitudMaxima = longitudMaxima;
         this.ocupado = ocupado;
-        this.tipoAmarre = tipoAmarre;
+        setTipoAmarre(tipoAmarre);
         calcularPrecioDia();
+    }
+
+
+     private void asignarAmarre(){
+        numero = numeroAmarres;
+        numeroAmarres++;
     }
 
     public int getNumero() {
@@ -41,7 +49,13 @@ public class Amarre {
         return longitudMaxima;
     }
 
+    public double getPrecioDia() {
+        if (precioDia == -1) {
+            imprimirMensajeError("Longitud máxima con valor erroneo al ser menor de 4.0M. Solucionelo por favor");
+        }
+        return precioDia;    }
     private void calcularPrecioDia() {
+        if (tipoAmarre!=null&&longitudMaxima!=0.0) { 
         if (tipoAmarre.equals("Normal")) {
             precioDia = 25 + (1.5 * longitudMaxima);
         } else if (tipoAmarre.equals("Premium")) {
@@ -51,6 +65,7 @@ public class Amarre {
         } else {
             precioDia = 0;
         }
+    }
     }
 
     public void setLongitudMaxima(double longitudMaxima) {
