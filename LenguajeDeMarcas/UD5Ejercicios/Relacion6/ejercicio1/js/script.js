@@ -22,20 +22,20 @@ container.innerHTML = `
 </form>
 `;
 
+// Focus y blur → cambiar borde
+function cambiarBorde() {
+    this.style.borderColor = "orange";
+}
+
+function restaurarBorde() {
+    this.style.borderColor = "";
+}
 const nombre = document.getElementById("nombre");
 const email = document.getElementById("email");
 const producto = document.getElementById("producto");
 const cantidad = document.getElementById("cantidad");
 const form = document.getElementById("pedidoForm");
 
-// Focus y blur → cambiar borde
-function cambiarBorde() {
-    this.style.borderColor = "blue";
-}
-
-function restaurarBorde() {
-    this.style.borderColor = "";
-}
 
 nombre.addEventListener("focus", cambiarBorde);
 email.addEventListener("focus", cambiarBorde);
@@ -54,7 +54,7 @@ producto.addEventListener("change", function () {
 form.addEventListener("submit", function (event) {
     if (nombre.value === "" || email.value === "" || cantidad.value <= 0) {
         console.log("Error: Todos los campos son obligatorios y la cantidad debe ser mayor a 0");
-        event.preventDefault();
+        event.preventDefault(); // PARA QUE NO SE ENVIE EL FORMULARIO
     } else {
         console.log("Formulario enviado correctamente");
     }

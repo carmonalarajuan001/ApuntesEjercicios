@@ -24,12 +24,12 @@ busqueda.addEventListener("keydown", function (event) {
 // 3. keyup → filtrar productos
 busqueda.addEventListener("keyup", function () {
 
-    var filtro = this.value.toLowerCase();
-    var productosLista = document.querySelectorAll(".producto");
+    let filtro = this.value.toLowerCase();
+    let productosLista = document.querySelectorAll(".producto");
 
     productosLista.forEach(function (producto) {
 
-        var nombre = producto.getAttribute("data-nombre").toLowerCase();
+        let nombre = producto.getAttribute("data-nombre").toLowerCase();
 
         if (nombre.includes(filtro)) {
             producto.style.display = "block";
