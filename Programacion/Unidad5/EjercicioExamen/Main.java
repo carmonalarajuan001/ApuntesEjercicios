@@ -44,9 +44,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal animal1 = new Animal("zebra", "B-342", 5, 500);
+        //Animal animal1 = new Animal("zebra", "B-342", 5, 500);
+        //zoo.agregarAnimal(animal1);
         Zoologico zoo = new Zoologico();
-        zoo.agregarAnimal(animal1);
+         // ===== Generamos animales con Faker =====
+        int numeroAnimalesAFaker = 10; // Puedes cambiar la cantidad
+        for (int i = 0; i < numeroAnimalesAFaker; i++) {
+            String nombre = Faker.nombreAnimal();
+            String codigo = Faker.codigoAnimal();
+            int cantidad = Faker.cantidadAnimal();
+            double precio = Faker.precioAnimal();
+
+            Animal animal = new Animal(nombre, codigo, cantidad, precio);
+            zoo.agregarAnimal(animal);
+        }
         ArrayList<Integer> opcionesMenuArrayList = new ArrayList<>();
         opcionesMenuArrayList.add(1);
         opcionesMenuArrayList.add(2);
@@ -58,7 +69,6 @@ public class Main {
         int opcion = 0;
         Scanner scanner = new Scanner(System.in);
         boolean entradaValida = true;
-        Zoologico zoologico = new Zoologico();
 
         while (entradaValida) {
 
@@ -89,19 +99,49 @@ public class Main {
                     System.out.print("Ingrese el número de animales a agregar: ");
                     int numeroAnimalesAgregar = scanner.nextInt();
                     scanner.nextLine(); // limpiar buffer
-                    ArrayList<Boolean> animal = zoo.agregarEjemplares(codigoAgregar, numeroAnimalesAgregar);
-                    if (animal.get(0)) {
-                        System.out.println("El numero de animales que ha introducido es 0");
-                    } else if (!animal.get(1)) {
-                        System.out.println("Ese codigo no le pertenece a ningun animal");
+                    ArrayList<Boolean> resultadoOpcion3 = zoo.agregarEjemplares(codigoAgregar, numeroAnimalesAgregar);
+                    if (resultadoOpcion3.get(0)) {
+                        System.out.println("El número de animales debe ser mayor que 0.");
+                    } else if (resultadoOpcion3.get(1)) {
+                        System.out.println("Ese código no le pertenece a ningún animal.");
+                    } else if (resultadoOpcion3.get(2)) {
+                        System.out.println("Ejemplares agregados correctamente.");
                     }
-                    scanner.nextLine();
                 } else if (opcion == 4) {// Retirar ejemplares de un animal
+
                     System.out.print("Ingrese el código del animal del que desea retirar ejemplares: ");
+                    String codigoRetirar = scanner.nextLine();
 
-                } else if (opcion == 5) {// Eliminar animal
-                    System.out.println("Introduce el nombre del animal que quieres eliminar");
+                    System.out.print("Ingrese el número de ejemplares a retirar: ");
+                    int numeroRetirar = scanner.nextInt();
+                    scanner.nextLine(); // limpiar buffer
 
+                    ArrayList<Boolean> resultado = zoo.retirarEjemplares(codigoRetirar, numeroRetirar);
+
+                    if (resultado.get(1)) {
+                        System.out.println("Animal no encontrado.");
+                    } else if (resultado.get(0)) {
+                        System.out.println("El número debe ser mayor que 0.");
+                    } else if (resultado.get(2)) {
+                        System.out.println("No se puede retirar más ejemplares de los disponibles.");
+                    } else if (resultado.get(3)) {
+                        System.out.println("Ejemplares retirados correctamente.");
+                    }
+
+                } else if (opcion == 5) { // Eliminar animal
+
+                    System.out.print("Introduce el código del animal que quieres eliminar: ");
+                    String codigoEliminar = scanner.nextLine();
+
+                    ArrayList<Boolean> resultado = zoo.eliminarAnimal(codigoEliminar);
+
+                    if (resultado.get(1)) {
+                        System.out.println("Animal no encontrado.");
+                    } else if (resultado.get(2)) {
+                        System.out.println("No se puede eliminar un animal con ejemplares disponibles.");
+                    } else if (resultado.get(0)) {
+                        System.out.println("Animal eliminado correctamente.");
+                    }
                 } else if (opcion == 6) {
                     System.out.println("Saliendo del programa...");
                     entradaValida = false;
