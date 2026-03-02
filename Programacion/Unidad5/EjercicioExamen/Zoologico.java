@@ -54,7 +54,7 @@ public class Zoologico {
             animal.setCantidad(animal.getCantidad() + numeroAnimalesAgregar);
             controlErroresAgregar.set(2, true); // Operación correcta
         }
-        return controlErroresAgregar; // ÚNICO RETURN
+        return controlErroresAgregar; 
     }
 
     public ArrayList<Boolean> retirarEjemplares(String codigoPaRetirar, int numeroAnimalesRetirar) {
